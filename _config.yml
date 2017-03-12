@@ -1,7 +1,7 @@
 # Site Settings
 title:               Hanezu
-tagline:             Syun
-description:         ようこそジプシー、我が神秘のブログに
+tagline:             ようこそジプシー、我が神秘のブログに
+description:        
 baseurl:            #"/Lagrange"
 url:                #"https://lenpaul.github.io"
 github:
@@ -13,7 +13,7 @@ author:
   instagram:         ""
   github:            "hanezu"
   facebook:          "Huachun Zhu"
-  linkedin:          "Huachun Zhu"
+  linkedin:          "huachun-zhu-ab5541b2"
 navigation:
 - title: About
   url: /about
