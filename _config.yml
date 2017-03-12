@@ -1,7 +1,7 @@
 # Site Settings
 title:               Hanezu
 tagline:             ようこそジプシー、我が神秘のブログに
-description:        
+description:         journey around the world - machine learning, math, and programming.
 baseurl:            #"/Lagrange"
 url:                #"https://lenpaul.github.io"
 github:
