@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08adddc4-07a1-4b15-a182-6561d9d4a1ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="$PROJECT_DIR$/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-    </list>
+    <list default="true" id="08adddc4-07a1-4b15-a182-6561d9d4a1ba" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -132,8 +128,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="23" />
+    <option name="x" value="1310" />
+    <option name="y" value="-138" />
     <option name="width" value="1250" />
     <option name="height" value="777" />
   </component>
@@ -318,15 +314,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489325581843</updated>
-      <workItem from="1489325584539" duration="1535000" />
+      <workItem from="1489325584539" duration="1630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1535000" />
+    <option name="totallyTimeSpent" value="1630000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="23" width="1250" height="777" extended-state="6" />
+    <frame x="1310" y="-138" width="1250" height="777" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1985354" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
