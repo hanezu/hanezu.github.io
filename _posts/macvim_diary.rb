@@ -1,7 +1,7 @@
-require "date"
+require 'date'
+require_relative 'vim_diary'
 
-date = Date.today
-datestr = date.strftime("%Y-%m-%d")
-filename = datestr + '-' + datestr + '.md'
+#TODO stop if the file is already opened
+filename = diary_file_name
 `touch #{filename}`
 `open -a MacVim.app #{filename}`
