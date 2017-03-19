@@ -1,7 +1,6 @@
 require 'date'
 require_relative 'vim_diary'
 
-#TODO stop if the file is already opened
 filename = diary_file_name
-`touch #{filename}`
+init_diary_file(filename) unless File.file?(filename)
 `open -a MacVim.app #{filename}`
