@@ -1,11 +1,11 @@
 # Site Settings
 title:               Hanezu
 tagline:             ようこそジプシー、我が神秘のブログに
-description:         journey around the world - machine learning, math, and programming.
-baseurl:            #"/Lagrange"
-url:                #"https://lenpaul.github.io"
+description:         Hanezu's blog.
+baseurl:             
+url:                 "https://hanezu.github.io"
 github:
-  url:               #"https://lenpaul.github.io/Lagrange"
+  url:               "https://hanezu.github.io/"
 author:
   name:              "Hanezu Syun"
   email:             "tim.zhc@gmail.com"
