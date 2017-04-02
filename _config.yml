@@ -3,9 +3,9 @@ title:               Hanezu
 tagline:             ようこそジプシー、我が神秘のブログに
 description:         Hanezu's blog.
 baseurl:             
-url:                 "https://hanezu.github.io"
+url:                 #"https://hanezu.github.io"
 github:
-  url:               "https://hanezu.github.io/"
+  url:               #"https://hanezu.github.io/"
 author:
   name:              "Hanezu Syun"
   email:             "tim.zhc@gmail.com"

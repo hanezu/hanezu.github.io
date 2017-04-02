@@ -19,6 +19,7 @@ def init_diary_file diary
   buffer << '  creditlink:'
   buffer << '---'
   buffer << ''
+  buffer << '1. TOC'
   buffer << '{:toc}'
   File.open(diary, 'w') do |file|
 	file.write(buffer.join("\n"))
