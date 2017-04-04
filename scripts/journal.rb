@@ -1,45 +1,48 @@
 require "date"
-require_relative 'rename'
+require_relative 'post'
 
 
-module Diary
+module Journal
 
 
-  def Diary.default_name
+  def Journal.default_name
     date = Date.today.to_s
     date + '-' + date + '.md'
   end
 
-  def Diary.init(diary, has_img=false, has_credit=false)
+  def Journal.init(diary, has_img=false)
     buffer = []
     buffer << '---'
     buffer << 'layout: post'
     buffer << "title: \"#{diary}\""
     buffer << 'categories: journal'
     buffer << 'tags: [,]'
+
     if has_img
       buffer << 'image:'
       buffer << '  feature: .jpg'
       buffer << '  teaser: .jpg'
-    end
-    if has_credit
       buffer << '  credit:'
       buffer << '  creditlink:'
     end
+
     buffer << '---'
     buffer << ''
+
+    # insert table of content
     buffer << '1. TOC'
     buffer << '{:toc}'
-    File.open(Name.path_from_title(diary), 'w') do |file|
+
+    File.open(Post.path_from_title(diary), 'w') do |file|
       file.write(buffer.join("\n"))
     end
   end
 
-  def Diary.vim diary
+  def Journal.vim diary
     system('vim', diary)
   end
 
-  def Diary.edit diary
+  def Journal.edit diary
     `open -a MacVim.app #{diary}`
   end
 end

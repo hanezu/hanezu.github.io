@@ -2,7 +2,7 @@
 
 require "thor"
 
-Dir[File.join(".", "scripts/*.rb")].each do |f|
+Dir[File.join(".", "scripts", "*.rb")].each do |f|
   require f
 end
 
@@ -14,54 +14,41 @@ class Hanezu < Thor
 
   def new(journal)
     # filename = Name.filename_from_title(journal)
-    path = Name.path_from_title(journal)
-    Diary.init(journal, has_img=options[:image]) unless File.file?(path)
+    path = Post.path_from_title(journal)
+    Journal.init(journal, has_img=options[:image]) unless File.file?(path)
     if options[:vim]
-      Diary.vim path
+      Journal.vim path
     else
-      Diary.edit path
+      Journal.edit path
     end
   end
 
 
-  option :index, :type => :numeric, :aliases => 'i'
-  option :name, :aliases => 'n'
   desc "rename", "rename newest journal"
 
-  def rename()
-    post = if options[:index]
-             post_at(options[:index])
-           else
-             Name.newest_post
-           end
-    name = if options[:name]
-             options[:name]
-           else
-             # rename it to match its title
-             Name.get_title_of(post)
-           end
-    Name.rename(post, name)
+  def rename(index=1, name=nil)
+    post = post_at index
+    name ||= Post.get_title_of(post)  # default: rename it to match its title
+    Post.rename(post, name)
   end
 
-  option :length, :type => :numeric, :aliases => 'l'
   desc "ls", "list posts"
 
-  def ls()
-    posts = Dir.glob("#{Name::POSTS_DIR}*.md")
+  def ls(length=10)
+    posts = Dir.glob("#{Post::POSTS_DIR}*.md")
     size = posts.size
-    length = options[:length] || 10
     posts.each_with_index do |f, idx|
-      ridx = size - idx
+      ridx = size - idx  # reversed index
       if ridx > length
         next
       end
-      puts "%2d: #{Name.get_title_of(f)}" % ridx
+      puts "%2d: #{Post.get_title_of(f)}" % ridx
     end
   end
 end
 
 def post_at index
-  posts = Dir.glob("#{Name::POSTS_DIR}*.md")
+  posts = Dir.glob("#{Post::POSTS_DIR}*.md")
   posts[-Integer(index)]
 end
 
