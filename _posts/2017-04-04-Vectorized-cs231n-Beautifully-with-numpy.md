@@ -79,5 +79,16 @@ because the above line picks every labeled element from the scores, the left wil
 
 # Broadcasting
 
-[Great guide here](http://cs231n.github.io/python-numpy-tutorial/#numpy-broadcasting)
+[Great guide here.](http://cs231n.github.io/python-numpy-tutorial/#numpy-broadcasting)
 
+Scenarios for broadcasting comes out everywhere.
+
+## add an (N,) vector to every column/row of an (N,M)/(M,N) matrix.
+
+for (N, M) matrix
+
+`vec.reshape((N, 1)) + mat`
+
+## calculate difference between every element of two same size vectors
+
+`vec1.reshape((N, 1)) - vec2.reshape((1, N))`
