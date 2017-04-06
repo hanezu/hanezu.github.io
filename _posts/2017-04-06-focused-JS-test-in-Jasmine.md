@@ -28,3 +28,19 @@ It's really annoying (perhaps there are other solutions), so I decided to run wi
 
 Putting f in front of your `it`s or `describe`s, and start your Karma.
  Only the one you prefixed with `f` will run. 
+ 
+# Play Karma in WebStorm 
+ 
+ Install Karma Plugin in WebStorm, and you can now configure that 
+ ^R will run the spec code in Karma.
+ 
+ If you would like to prefix `f` to your suite, it will just function as handy 
+ as any other Unit Test framework for Python or Ruby.
+ 
+# JetBrains IDE Debugger and Chrome 
+
+To run in debug mode, install JetBrains IDE Support Plugin in Chrome, and 
+configure the IDE Connection Host and Port according to what your IDE says.
+
+
+ 
