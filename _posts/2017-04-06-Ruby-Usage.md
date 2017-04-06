@@ -30,4 +30,4 @@ my_fn if __FILE__==$0
 
 Very basic points but I made mistake here.
 
-In [this blog](http://www.verygoodindicators.com/blog/2015/03/15/ruby-contructors/), read the 
+It is explained in [this blog](http://www.verygoodindicators.com/blog/2015/03/15/ruby-contructors/)

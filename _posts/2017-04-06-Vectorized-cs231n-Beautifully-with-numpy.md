@@ -1,3 +1,4 @@
+---
 layout: post
 title: "Vectorized cs231n Beautifully with numpy"
 categories: journal
