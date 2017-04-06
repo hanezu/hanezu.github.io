@@ -34,7 +34,7 @@ class Hanezu < Thor
     post = post_at Integer(index)
 
     # default: rename it to match its title
-    name ||= Post.parse_title(post)
+    name ||= Post.title_of(post)
 
     Post.rename(post, name)
   end

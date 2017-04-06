@@ -1,13 +1,67 @@
+---
+layout: post
+title: "Rails usage"
+categories: journal
+tags: [rails]
+---
 
-# Ruby 
+1. TOC
+{:toc}
 
-## new and initialize
 
-Very basic points but I made mistake here.
+## RubyMine cannot find ActiveRecord
 
-In [this blog](http://www.verygoodindicators.com/blog/2015/03/15/ruby-contructors/), read the 
+I first found out that I should install bundle again, but still not works.
 
-# Rails
+And in [this post at SO](http://stackoverflow.com/questions/11418408/rubymine-rails-gem-not-found),
+
+> You need to add ruby sdks
+
+> In RubyMine from file -> settings -> ruby Sdk and Gems -> add sdk
+
+Which solved my problem. The error was because I installed both rbenv and rvm, annd I chose sdk as rbenv while install the bundle using rvm.
+
+## Parsing a JSON string in Ruby
+By [SO], `JSON.parse(string)` does the job.
+
+It return a Hash, and its usage is [here](https://ruby-doc.org/core-2.4.0/Hash.html).
+
+## Getting list of attribute from list of objects
+Referred to [SO](http://stackoverflow.com/questions/16906922/iterate-over-array-of-objects-and-return-attributes),
+```
+ windows.map(&:device_serial)
+```
+
+## Remove a has\_many relation
+
+Say we have a User who own a lot of windows, and a Window can only belong to a User at a time. Now user1 give the window to user2. We want to alter the ownership of the window.
+
+I first tried to alter relation by `delete` and then `association=(new_owner)`. But it fails. The `RuntimeError` `Can't modify frozen hash` will pop out everytime.
+
+The reason is that, by deleting, although I can still refer to `self`, if I call
+
+```ruby
+
+self.destroyed? # => true
+
+```
+
+and a destroyed object is frozen.
+
+The correct way to do this is by setting a reverse association.
+
+```ruby
+# User
+  has_many :windows,
+    class_name: 'Window',
+    dependent: :destroy,
+    inverse_of: :user
+
+# Window
+  belongs_to :user,
+    inverse_of: :windows
+
+```
 
 ## Debug with rescue
 
@@ -101,27 +155,6 @@ The answer [by SO](http://stackoverflow.com/questions/37810599/return-render-vs-
 > I don't believe anything is actually listening for the return value of the controller actions.
 
 
-## irb Class
-
-The book [Programming Ruby - The Pragmatic Programmer's Guide](http://ruby-doc.com/docs/ProgrammingRuby/html/index.html) is fantastic. I'm reading the paperback at home, but it actually come with a free e-book.
-
-And in its chapter [Interactive Ruby Shell](http://ruby-doc.com/docs/ProgrammingRuby/html/irb.html), it recommend a nice way of playing with your codes: by sneaking into your class/object using irb subsession.
-
-Basically, I can do
-
-```irb
-
-load 'error_code.rb'
- => true
-
-2.3.1 :003 > irb ErrorCode
-2.3.1 :001 > jobs
- => #0->irb on main (#<Thread:0x007fea4c0673e8>: stop)
-#1->irb#1 on ErrorCode (#<Thread:0x007fea4b832c40>: running) 
-```
-
-Then I am on the way to go and playing my ErrorCode's constants.
-
 ## Model A has\_one Model B: create together
 
 I have two model that are one-on-one and onto with each other, say, a Window and a WindowConnection.
@@ -140,5 +173,6 @@ to Window, so that I can use `c = window.connection` without initialization.
 ## Extract Testing method
 
 [This blog](https://testdrivenwebsites.com/2011/08/17/different-ways-of-code-reuse-in-rspec/) explained ways to extract Testing method.
+
 
 

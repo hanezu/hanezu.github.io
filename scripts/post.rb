@@ -9,16 +9,14 @@ module PostModule
 
     class << self
 
-      # def title_of(path)
-      #
-      #   File.open(path).each do |line|
-      #     if line =~ /title:/
-      #       return line.split('"')[1]
-      #     end
-      #     raise ErrorModule::UntitledPostError, "post at #{path} do not have a title!"
-      #   end
-      #   ''
-      # end
+      def title_of(path)
+        File.open(path).each do |line|
+          if line =~ /title:/
+            return line.split('"')[1]
+          end
+        end
+        raise ErrorModule::UntitledPostError, "post at #{path} do not have a title!"
+      end
 
       def filename_of(title)
         Date.today.to_s + '-' + title.gsub(/ /, '-') + '.md'
@@ -36,7 +34,8 @@ module PostModule
       def rename(path, title)
         new_path = path_of(title)
         if path.downcase == new_path.downcase
-          puts "No need for renaming #{path} to #{new_path}" and return
+          puts "No need for renaming #{path} to #{new_path}"
+          return
         end
         new_file = File.open(new_path, 'w')
         yet_title = true
