@@ -10,7 +10,6 @@ class Hanezu < Thor
   include JournalModule
   include ErrorModule
 
-  option :vim, :type => :boolean, :aliases => 'v'
   option :image, :type => :boolean, :aliases => 'i'
   desc "new JOURNAL", "create new Journal JOURNAL"
 

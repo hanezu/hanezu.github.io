@@ -20,7 +20,7 @@ It might be better to write function and execution of it separately in script, b
 This can be achieved by 
 ```ruby
 def my_fn
-	...
+	# ...
 end
 
 my_fn if __FILE__==$0
