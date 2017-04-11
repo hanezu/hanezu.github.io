@@ -10,13 +10,14 @@ class Hanezu < Thor
   include JournalModule
   include ErrorModule
 
+  option :latex, :type => :boolean, :aliases => 'l'
   option :image, :type => :boolean, :aliases => 'i'
   desc "new JOURNAL", "create new Journal JOURNAL"
 
   def new(journal, open_with=nil)
     # filename = Name.filename_from_title(journal)
     path = Post.path_of(journal)
-    Journal.init(journal, has_img=options[:image]) unless File.file?(path)
+    Journal.init(journal, has_img=options[:image], has_latex=options[:latex]) unless File.file?(path)
     case open_with
       when %w{ vim v }
         Post.vim path
@@ -51,6 +52,10 @@ class Hanezu < Thor
       puts "%2d: #{Post.parse_title(f)}" % ridx
     end
   end
+
+  # TODO: list the recent images.
+
+  # TODO: insert picture into post
 
   no_commands do
     def post_at(index)

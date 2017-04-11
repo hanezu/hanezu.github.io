@@ -8,7 +8,7 @@ module JournalModule
 
     class << self
 
-      def init(diary, has_img=false)
+      def init(diary, has_img=false, has_latex=false)
         buffer = []
         buffer << '---'
         buffer << 'layout: post'
@@ -26,6 +26,10 @@ module JournalModule
 
         buffer << '---'
         buffer << ''
+
+        if has_latex
+          buffer << ''
+        end
 
         # insert table of content
         buffer << '1. TOC'

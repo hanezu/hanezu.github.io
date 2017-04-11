@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "Trick for condensed dimension of derivatives in back propagation"
+title: "Replace derivatives in back propagation"
 categories: journal
-tags: [backpropagation]
+tags: [backprop]
+image:
+  feature: 
+  teaser: Replace-derivatives-in-back-propagation/calculation.jpg
 ---
 
-<title>MathJax TeX Test Page</title>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
 <script type="text/javascript" async
  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
 </script>
-<body>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
 
 When I tried to calculate the derivative of ReLU, i.e.
 
@@ -28,7 +30,7 @@ Actually it is. But according to [this document by Erik Learned-Miller, ](http:/
   which can be used to compute the result on any element of the desired three dimensional
   array
 
-Which says, condensing the derivative *tensors* is not only possible,
+Which says, _condensing_ the derivative 'tensor monsters' into a simple formula is not only possible,
 but also an important trick when back-prop through the neural networks.
 
 1. TOC
@@ -46,7 +48,7 @@ $$
 
 but it helps nothing! What is $\mathrm{d}Y/\mathrm{d}X$ anyway?
 
-so we have to rewrite it, **element wise**.
+so we have to rewrite it, __element wise__.
 
 ## Element-wise analysis
 
@@ -69,14 +71,14 @@ Now we are ready to reduce the $\mathrm{d}Y/\mathrm{d}X$ monster.
 
 $$
 \mathrm{d}L/\mathrm{d}X 
-= (\mathrm{d}L/\mathrm{d}X_{i,j})\_{i,j}
-= (\mathrm{d}L/\mathrm{d}Y\_{i,j} \cdot 1(X_{i,j}> 0))\_{i,j}
+= (\mathrm{d}L/\mathrm{d}X_{i,j})_{i,j}
+= (\mathrm{d}L/\mathrm{d}Y_{i,j} \cdot 1(X_{i,j}> 0))_{i,j}
 $$
 $$
-= \mathrm{d}L/\mathrm{d}Y \* 1(X > 0)
+= \mathrm{d}L/\mathrm{d}Y * 1(X > 0)
 $$
 
-Here $\*$ denote element-wise product between matrices.
+Here $*$ denote element-wise product between matrices.
  
 ## So did you simplified $\mathrm{d}Y/\mathrm{d}X$ ?
 
@@ -100,5 +102,9 @@ $$
 
 and $f_\frac{\mathrm{d}Y}{\mathrm{d}X}$ should be as simple and quick to calculate as possible.
 
+ ![myimg]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/calculation.jpg)
+
 > Representing the important part of derivative arrays` in a compact way is critical to
   efficient implementations of neural networks.
+ 
+
