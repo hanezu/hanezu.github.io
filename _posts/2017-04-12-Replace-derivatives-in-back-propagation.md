@@ -5,7 +5,7 @@ categories: journal
 tags: [backprop]
 image:
   feature: 
-  teaser: Replace-derivatives-in-back-propagation/calculation.jpg
+  teaser: Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg
 ---
 
 <script type="text/javascript" async
@@ -92,8 +92,23 @@ Actually it simply accelerate the calculation.
 As you can see, the original matrix-dot manipulation is even replaced by a element-wise product.
 But it doesn't matter.
 
-## To generalize
+# More backprop calculation 
 
+For backprop in layer,
+
+ ![my calculation for backprop dYdX and dYdW]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg)
+ 
+ and $\mathrm{d}Y/\mathrm{d}b$ actually needs more care,
+ because actually a broadcast is going on here.
+ 
+ ![my calculation for backprop dYdb]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdb.jpg)
+
+ 
+# To generalize
+
+> Representing the important part of derivative arrays in a compact way is critical to
+  efficient implementations of neural networks.
+  
 We are looking for a map $f_\frac{\mathrm{d}Y}{\mathrm{d}X}$ s.t.
 
 $$
@@ -102,9 +117,4 @@ $$
 
 and $f_\frac{\mathrm{d}Y}{\mathrm{d}X}$ should be as simple and quick to calculate as possible.
 
- ![myimg]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/calculation.jpg)
-
-> Representing the important part of derivative arrays` in a compact way is critical to
-  efficient implementations of neural networks.
- 
 
