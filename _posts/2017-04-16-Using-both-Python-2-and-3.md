@@ -57,3 +57,33 @@ Simply
 
 and the (python2) in front of your command line should disappear and you are back to python3!
 
+# Anaconda directory and Normal Python directory
+
+One thing to bear in mind is that 
+the configuration for your python are now in anaconda directory.
+
+This means you need to be careful when following instructions
+on installation or configuration, because methods normally suitable
+for non-anaconda users might not suit you anymore.
+
+For example, I have installed extensions for Jupyter Notebook
+following the instructions on [GitHub](https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation)
+by installing into the user's home jupyter directories
+
+```
+jupyter contrib nbextension install --user
+```
+
+When I started the Notebook, it warns me like 
+
+```
+[jupyter_nbextensions_configurator] nbextension 'qtconsole/qtconsole' has duplicate listings in both '/Users/Me/anaconda3/envs/python2/share/jupyter/nbextensions/qtconsole/qtconsole.yaml' and '/Users/Me/Library/Jupyter/nbextensions/qtconsole/qtconsole.yaml'
+```
+
+To deal with this problem, I uninstall the original files by
+`jupyter contrib nbextension uninstall --user`
+and install the extension in 
+`/Users/Me/anaconda3/envs/python2/share/jupyter/nbextensions/`
+
+Notice that this notebook extension is now installed for python2,
+and you may still need to install it for python3.
