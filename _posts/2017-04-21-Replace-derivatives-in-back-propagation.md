@@ -94,7 +94,7 @@ But it doesn't matter.
 
 # More backprop calculation 
 
-For backprop in layer,
+## Affine layer
 
  ![my calculation for backprop dYdX and dYdW]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg)
  
@@ -103,6 +103,9 @@ For backprop in layer,
  
  ![my calculation for backprop dYdb]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdb.jpg)
 
+## Batch Norm layer
+
+![bachnorm backprop]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/batch_norm.jpg)
  
 # To generalize
 
