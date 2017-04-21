@@ -80,6 +80,19 @@ $$
 
 Here $*$ denote element-wise product between matrices.
  
+## Implement in code
+
+As is shown in [this lecture note](http://cs231n.github.io/neural-networks-case-study/#net)
+
+> the ReLU unit lets the gradient pass through unchanged if its input was greater than 0, but kills it if its input was less than zero during the forward pass. 
+
+so the code implementation would be
+
+```python
+# backprop the ReLU non-linearity
+dhidden[hidden_layer <= 0] = 0
+```
+ 
 ## So did you simplified $\mathrm{d}Y/\mathrm{d}X$ ?
 
 No, I didn't. 
