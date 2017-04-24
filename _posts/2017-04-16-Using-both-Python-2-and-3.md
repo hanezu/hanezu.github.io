@@ -53,7 +53,7 @@ gets
 
 Simply 
 
-`source activate python2`
+`source deactivate python2`
 
 and the (python2) in front of your command line should disappear and you are back to python3!
 
