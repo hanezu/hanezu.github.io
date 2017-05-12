@@ -26,6 +26,19 @@ module PostModule
         _posts(filename_of(title))
       end
 
+      def tag_of(path)
+        File.open(path).each do |line|
+          if line =~ /tags:/
+            tag_str = line.split(':')[1]
+            tag_content = tag_str[tag_str.index('[') + 1, tag_str.index(']') - 2]
+            tag_list = tag_content.strip.split(',')
+            return tag_list.map(&:strip)
+          end
+        end
+        raise ErrorModule::UntitledPostError, "post at #{path} do not have a title!"
+
+      end
+
       def parse_title(filename)
         # YYYY-MM-DD-TIT-LE.md
         filename.split('.')[0].split('-')[3..-1].join(' ')

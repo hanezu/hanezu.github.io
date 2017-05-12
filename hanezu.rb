@@ -53,6 +53,23 @@ class Hanezu < Thor
     end
   end
 
+  desc "tag", "show tags"
+
+  def tag()
+    statistics = Hash.new(0)
+    Dir.glob(Post._posts('*.md')).each do |f|
+      tags = Post.tag_of(f)
+      # puts "#{tags}"
+      tags.each do |tag|
+        statistics[tag] += 1
+      end
+      if tags.size == 0
+        puts "#{f} has no tags!"
+      end
+    end
+    puts statistics
+  end
+
   # TODO: list the recent images.
 
   # TODO: insert picture into post
