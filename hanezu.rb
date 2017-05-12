@@ -67,7 +67,12 @@ class Hanezu < Thor
         puts "#{f} has no tags!"
       end
     end
-    puts statistics
+    statistics.sort_by { |k, v| k }.each_with_index do |tag, idx|
+      print "%-20s %-5d" % tag
+      if idx % 6 == 5
+        print "\n"
+      end
+    end
   end
 
   # TODO: list the recent images.
