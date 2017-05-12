@@ -2,7 +2,7 @@
 layout: post
 title: "Training with Google Cloud"
 categories: journal
-tags: [,]
+tags: []
 ---
 
 I was looking for a way to [edit the code in my laptop 
