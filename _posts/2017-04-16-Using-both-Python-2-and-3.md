@@ -98,3 +98,17 @@ Besides changing `print` to a function, some annoying difference should be aware
  Python3: 1.5
  
  Very annoying!
+ 
+# Install opencv3 by anaconda
+
+Look up the current available python versions.
+
+install the 3.5.3 version since opencv is currently
+not supported by anaconda on Mac,
+and install it from conda-forge channel.
+
+```
+conda search python
+conda install python=3.5.3
+conda install -c conda-forge opencv
+```
