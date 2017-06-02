@@ -115,7 +115,7 @@ However, actually there is a tidier solution.
 # 'Order' of 'Simultaneous' Assignment
  
 If you thought "it is actually not simultaneous!"
-then you are on the right track. It isn't.
+then you are on the right track. 
 The order does matter.
 
 ## An example from the above Counterexample
@@ -146,16 +146,16 @@ saekano.name = "saekano"
 
 Now
 
-    (a.name, a) = ("eromanga-sensei", saekano)
+    a.name, a = "eromanga-sensei", saekano
     
 will define `a`'s name to "eromanga-sensei", and let `a`
-points to `saekano`. so `a.name` will be "saekano"
+points to `saekano`. So `a.name` will be "saekano"
 
 While
 
-    (a, a.name) = (saekano, "eromanga-sensei")
+    a, a.name = saekano, "eromanga-sensei"
     
-change `a.name` and `b.name` to "eromanga-sensei" in effect.
+change both `a.name` and `b.name` to "eromanga-sensei" in effect.
 
 ## back to the original problem 
 
