@@ -14,7 +14,7 @@ module JournalModule
         buffer << 'layout: post'
         buffer << "title: \"#{diary}\""
         buffer << 'categories: journal'
-        buffer << 'tags: [,]'
+        buffer << 'tags: []'
 
         if has_img
           buffer << 'image:'

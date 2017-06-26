@@ -2,7 +2,7 @@
 layout: post
 title: "personalize blog website by jekyll"
 categories: journal
-tags: [,]
+tags: [jekyll]
 ---
 
 I am considering adding two new features to my blog, "tweet" and "diary".
