@@ -1,5 +1,5 @@
-title:  Lagrange
-tagline:  a minimalist Jekyll theme
+title:  Hanezu
+tagline:  ようこそジプシー、我が神秘のブログに
 
 # Authors documented under _data
 
@@ -17,8 +17,9 @@ menu:
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
-- {icon: 'github', link: 'https://www.github.com/lenpaul'}
-- {icon: 'twitter', link: 'https://twitter.com/paululele'}
-- {icon: 'linkedin', link: 'http://www.linkedin.com/in/lenpaul/'}
-- {icon: 'envelope', link: 'mailto:l.nguyen.paul@gmail.com'}
+- {icon: 'github', link: 'https://www.github.com/hanezu'}
+- {icon: 'twitter', link: 'https://twitter.com/hanezu_shun'}
+- {icon: 'instagram', link: 'https://www.instagram.com/hanezu_shun/'}
+- {icon: 'linkedin', link: 'http://www.linkedin.com/in/huachun/'}
+- {icon: 'envelope', link: 'mailto:tim.zhc@gmail.com'}
 - {icon: 'rss-square', link: 'feed.xml'}
