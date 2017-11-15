@@ -1,32 +1,29 @@
-# Site Settings
-title:               Hanezu
-tagline:             ようこそジプシー、我が神秘のブログに
-description:         Hanezu's blog.
-baseurl:             
-url:                 #"https://hanezu.github.io"
-github:
-  url:               #"https://hanezu.github.io/"
-author:
-  name:              "Hanezu"
-  email:             "tim.zhc@gmail.com"
-  twitter:           "hanezu_syun"
-  instagram:         ""
-  github:            "hanezu"
-  facebook:          "Huachun Zhu"
-  linkedin:          "huachun-zhu-ab5541b2"
-navigation:
-- title: About
-  url: /about
-- title: Writing
-  url: /writing
-- title: Contact
-  url: /contact
+# Site Build Settings
 
+# Jekyll-paginate-v2 configuration
+#  pagination:
+#   enabled: true
+#   per_page: 5
+#   permalink: '/page/:num/'
+#   title: ':title - page :num of :max'
+#   limit: 0
+#   sort_field: 'date'
+#   sort_reverse: true
+
+# jekyll-paginate configuration
 paginate:            5
-disqus:              #"your-disqus"
 
 # Build settings
 markdown:            kramdown
 highlighter:         rouge
 permalink:           none
-gems:                [jekyll-paginate]
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           "Lagrange"
+description:	       "A minimalist Jekyll theme"
+author:              "Paul Le"
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#   path:	     rss-feed.xml
