@@ -5,7 +5,7 @@ categories: journal
 tags: []
 ---
 
-The reason I resume my blog after several months is LeNPaul's new update that integrates features such as comment and Google analytics to this theme. This is just what I want (after comparing with other CMS such as HubPress or PageKit). 
+The reason I resume my blog after several months is [LeNPaul](https://github.com/LeNPaul)'s new update that integrates features such as comment and Google analytics to  [Lagrange](https://github.com/LeNPaul/Lagrange). This is just what I want (after comparing with other CMS such as HubPress or PageKit). 
 
 To be specific, my ideal blogging experience would be:  
 
@@ -16,7 +16,7 @@ To be specific, my ideal blogging experience would be:
 - interactive (at least reader can comment)
 - aware of the statistics of the website
 
-And they are all possible thanks to [LeNPaul](https://github.com/LeNPaul) who created and continue to maintain this cool Jekyll theme.
+And they are all possible thanks to LeNPaul who created and continue to maintain this cool Jekyll theme.
 
 And it seems that so much has changed since my first download that I need to adapt to hereafter.
 
