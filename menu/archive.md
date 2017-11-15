@@ -3,7 +3,7 @@ layout: page
 title: Archive 
 ---
 <ul class="posts">
-  {% for post in site.archives %}
+  {% for post in site.categories.archives %}
 
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y' }}</h3>
