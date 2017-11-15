@@ -27,11 +27,11 @@ when I try to simultaneously assign value to linked list.
 {:toc}
 
 
-# [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/#/description)
+# Reverse Nodes in k-Group
 
 ## reverse the pointing of adjacent nodes
 
-The critical step to solve this problem
+The critical step to solve [this problem](https://leetcode.com/problems/reverse-nodes-in-k-group/#/description)
 is to reverse the pointing of adjacent nodes.
 Which is: 
 
