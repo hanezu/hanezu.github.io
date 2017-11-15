@@ -5,8 +5,8 @@ tagline:  ようこそジプシー、我が神秘のブログに
 
 # Change to true for Disqus comments
 disqus:
-  comments: false
-  disqus_shortname: 'https-lenpaul-github-io-lagrange'
+  comments: true
+  disqus_shortname: 'hanezu'
 
 google-ID: 'UA-80213386-1'
 
