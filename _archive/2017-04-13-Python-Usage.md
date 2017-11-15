@@ -15,3 +15,14 @@ tags: [python]
 - python2 is `python -m SimpleHTTPServer`
 - python3 is `python3 -m http.server`
 
+
+# Difference between python 2 and 3
+
+Besides changing `print` to a function, some annoying difference should be aware of.
+ 
+ ## 3 / 2 = ?
+ 
+ Python2: 1
+ Python3: 1.5
+ 
+ Very annoying!

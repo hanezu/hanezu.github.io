@@ -88,17 +88,6 @@ and install the extension in
 Notice that this notebook extension is now installed for python2,
 and you may still need to install it for python3.
 
-# Difference between python 2 and 3
-
-Besides changing `print` to a function, some annoying difference should be aware of.
- 
- ## 3 / 2 = ?
- 
- Python2: 1
- Python3: 1.5
- 
- Very annoying!
- 
 # Install opencv3 by anaconda
 
 Look up the current available python versions.
