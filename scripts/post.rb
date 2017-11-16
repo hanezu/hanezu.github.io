@@ -5,7 +5,8 @@ require_relative 'error'
 
 module PostModule
   class Post
-    POSTS_DIR = '_posts'
+    POSTS_DIR = 'posts/_posts'
+    DRAFT_DIR = '_drafts'
 
     class << self
 
@@ -18,12 +19,22 @@ module PostModule
         raise ErrorModule::UntitledPostError, "post at #{path} do not have a title!"
       end
 
-      def filename_of(title)
-        Date.today.to_s + '-' + title.gsub(/ /, '-') + '.md'
+      def filename_of(title, is_draft=false)
+        prefix = if is_draft
+                   ''
+                 else
+                   Date.today.to_s + '-'
+                 end
+        prefix + title.gsub(/ /, '-') + '.md'
       end
 
-      def path_of(title)
-        _posts(filename_of(title))
+      def path_of(title, is_draft=false)
+        File.join(if is_draft
+                    DRAFT_DIR
+                  else
+                    POSTS_DIR
+                  end,
+                  filename_of(title, is_draft))
       end
 
       def tag_of(path)
@@ -63,10 +74,6 @@ module PostModule
         end
         new_file.close
         FileUtils.rm(path) if path && title
-      end
-
-      def _posts(dir)
-        File.join(POSTS_DIR, dir)
       end
 
       def vim(post)

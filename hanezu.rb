@@ -12,12 +12,13 @@ class Hanezu < Thor
 
   option :latex, :type => :boolean, :aliases => 'l'
   option :image, :type => :boolean, :aliases => 'i'
+  option :draft, :type => :boolean, :aliases => 'd'
   desc "new JOURNAL", "create new Journal JOURNAL"
 
   def new(journal, open_with=nil)
     # filename = Name.filename_from_title(journal)
     path = Post.path_of(journal)
-    Journal.init(journal, has_img=options[:image], has_latex=options[:latex]) unless File.file?(path)
+    Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft]) unless File.file?(path)
     case open_with
       when %w{ vim v }
         Post.vim path

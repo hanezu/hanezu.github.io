@@ -8,11 +8,11 @@ module JournalModule
 
     class << self
 
-      def init(diary, has_img=false, has_latex=false)
+      def init(title, has_img=false, has_latex=false, is_draft=true)
         buffer = []
         buffer << '---'
         buffer << 'layout: post'
-        buffer << "title: \"#{diary}\""
+        buffer << "title: \"#{title.gsub(/-/, ' ')}\""
         buffer << 'categories: journal'
         buffer << 'tags: []'
 
@@ -35,7 +35,7 @@ module JournalModule
         buffer << '1. TOC'
         buffer << '{:toc}'
 
-        File.open(PostModule::Post.path_of(diary), 'w') do |file|
+        File.open(PostModule::Post.path_of(title, is_draft), 'w') do |file|
           file.write(buffer.join("\n"))
         end
       end
