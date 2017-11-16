@@ -5,7 +5,11 @@ categories: journal
 tags: []
 ---
 
-The reason I resume my blog after several months is [LeNPaul](https://github.com/LeNPaul)'s new update that integrates features such as comment and Google analytics to  [Lagrange](https://github.com/LeNPaul/Lagrange). This is just what I want (after comparing with other CMS such as HubPress or PageKit). 
+The reason I resume my blog after several months is [LeNPaul](https://github.com/LeNPaul)'s new update that integrates features such as 
+- comment (with disqus)
+- no need to insert JS snippet here and there to write LaTeX! $$ ReLU(x) = \max (0, x) $$
+- and Google analytics
+ to [Lagrange](https://github.com/LeNPaul/Lagrange). This is just what I want (after comparing with other CMS such as HubPress or PageKit). 
 
 To be specific, my ideal blogging experience would be:  
 
@@ -15,6 +19,7 @@ To be specific, my ideal blogging experience would be:
 - commit and push it to GitHub Pages without managing a web server
 - interactive (at least reader can comment)
 - aware of the statistics of the website
+- host my blog on my personal site instead of some blog service providers, which tend to be local and I am at the risk of going through thick and thin with these providers.
 
 And they are all possible thanks to LeNPaul who created and continue to maintain this cool Jekyll theme.
 
