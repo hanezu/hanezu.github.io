@@ -76,7 +76,13 @@ class Hanezu < Thor
     end
   end
 
-  # TODO: list the recent images.
+  desc "lsimg", "list the latest image added to the images folder and return its link in markdown"
+  def lsimg()
+    latest_folder = Dir.glob("images/*/").max_by {|f| File.mtime(f)}
+    latest_img = Dir.glob("#{latest_folder}*").max_by {|f| File.mtime(f)}
+    img_name = File.basename(latest_img, ".*")
+    print "![#{img_name}]({{ site.github.url }}/#{latest_img})\n"
+  end
 
   # TODO: insert picture into post
 

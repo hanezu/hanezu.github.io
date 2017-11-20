@@ -471,3 +471,15 @@ pre {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+
+/*
+Custom CSS by Hanezu below
+ */
+
+/*
+display image caption
+ */
+img + em {
+  display: block;
+  text-align: center;
+}
