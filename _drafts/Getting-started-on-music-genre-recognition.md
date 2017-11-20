@@ -31,15 +31,15 @@ AttributeError: 'module' object has no attribute 'python'
 
 Probably as [this issue](https://github.com/axelbrando/Mixture-Density-Networks-for-distribution-and-uncertainty-estimation/issues/3) explained, I had the wrong version of TensorFlow installed.
 
-The version of Keras they used was 1.1.0 so the version of TensorFlow was probably very dated. The oldest one available for `pip install` was 0.12.0. I reinstalled but still not working.
+The version of Keras they used was 1.1.0 so the version of TensorFlow was probably very dated. The oldest one available for `pip install` was 0.12.0. I reinstalled to that version but still not working.
 
-The error changed to 
+However, the error changed to 
 ```python
     x = tf.python.control_flow_ops.cond(tf.cast(_LEARNING_PHASE, 'bool'),
 AttributeError: 'module' object has no attribute 'control_flow_ops'
 ```
 
-This time [StackOverflow](https://stackoverflow.com/questions/40046619/keras-tensorflow-gives-the-error-no-attribute-control-flow-ops) told me to install TensorFlow version 0.10, but it is not possible to pip install it directly.
+This time I found out that [I need to install TensorFlow version 0.10](https://stackoverflow.com/questions/40046619/keras-tensorflow-gives-the-error-no-attribute-control-flow-ops), but it is not available through direct pip install.
 
 So I went to [TensorFlow 0.10 on GitHub](https://github.com/tensorflow/tensorflow/tree/r0.10) and followed the [pip installation instruction](https://github.com/tensorflow/tensorflow/blob/r0.10/tensorflow/g3doc/get_started/os_setup.md):
 
@@ -49,19 +49,37 @@ So I went to [TensorFlow 0.10 on GitHub](https://github.com/tensorflow/tensorflo
 $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py2-none-any.whl
 
 # Mac OS X, GPU enabled, Python 2.7:
-$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0-py2-none-any.whl
+# $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/gpu/tensorflow-0.10.0-py2-none-any.whl
 
 # Python 2
 $ sudo pip install --upgrade $TF_BINARY_URL
 
 ```
 
-I want to show it to my friend with my MacBook so the environment is set up on my laptop. I was blocked by GFW for the last step, so I went to the cafeteria and used IPv6 to download it instead (sigh).
+I want to show it to my friend with my MacBook so I set up the environment on my laptop. (Indeed it was unbearably slow so I later on ran with GPU)
+
+I was blocked by GFW for the last step, so I went to the cafeteria and used IPv6 instead (sigh).
+
+Then the last bug said
+
+```
+    assert type(outputs) in {list, tuple}, 'Output to a TensorFlow backend function should be a list or tuple.'
+AssertionError: Output to a TensorFlow backend function should be a list or tuple.
+```
+
+I checked the code and in `common.py`, I modified one line of `get_layer_output_function` function to
+
+`f = K.function([input, K.learning_phase()], (output, ))`
+
+then it works. (probably it is because the TensorFlow version is still not correct? Maybe the easiest solution is to ask them for their version name)
 
 
 # Music recommendation by Keunwoo Choi
 
-On the other hand, [Keunwoo Choi](https://github.com/keunwoochoi) did many works on music recommendation.
+[Keunwoo Choi](https://github.com/keunwoochoi) worked from several other approaches, including
+
+1. Combining shallow and deep features from CNN to assemble a general purposed feature 
+1. Tagging using CNN or CRNN 
  
 ## Transfer learning 
  [Transfer learning for music classification and regression tasks](https://arxiv.org/pdf/1703.09179.pdf) ([Code](https://github.com/keunwoochoi/transfer_learning_music)) used concatenated features from different layers so that the extracted feature can be later on used for different tasks.
@@ -92,7 +110,7 @@ The author suggests [compact_cnn](https://github.com/keunwoochoi/music-auto_tagg
 
 ### Run compact_cnn
 
-Keunwoo Choi wrote a packae for on-the-fly calculation of STFT/melspectrograms called [kapre (Keras Audio Preprocessors)](https://github.com/keunwoochoi/kapre). 
+Keunwoo Choi wrote a package for on-the-fly calculation of STFT/melspectrograms called [kapre (Keras Audio Preprocessors)](https://github.com/keunwoochoi/kapre). 
 
 
 
