@@ -7,6 +7,8 @@ tags: []
 
 Per my friend's interest on deep learning based music recommendation, I decided to test some available idea on music classification (which is named Music Genre Recognition instead, and generally using CV liked models such as CNN).  
 
+*This post is under construction*
+
 1. TOC
 {:toc}
 
