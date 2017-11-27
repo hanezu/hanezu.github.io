@@ -135,6 +135,8 @@ It is possible to train this model with your personal music library, just by pla
 
 It seems that I can also predict the class of a new piece of music (although unable to manipulate the genre information in the mp3 files though) without writing additional codes.
 
+However, no pretrained model nor data is provided (Despoisj used his own iTunes library).
+
 ## MusicGenreClassification
 
 [A project by mlachmish](https://github.com/mlachmish/MusicGenreClassification) in TensorFlow that almost implemented Sander Dieleman's blog.
