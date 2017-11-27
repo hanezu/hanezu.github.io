@@ -2,6 +2,9 @@
 layout: post
 title: "Getting started on music genre recognition"
 tags: []
+image:
+  feature: 
+  teaser: 
 ---
 
 Per my friend's interest on deep learning based music recommendation, I decided to test some available idea on music classification (which is named Music Genre Recognition instead, and generally using CV liked models such as CNN).  
@@ -60,7 +63,7 @@ $ sudo pip install --upgrade $TF_BINARY_URL
 
 ```
 
-I want to show it to my friend with my MacBook so I set up the environment on my laptop. (Indeed it was unbearably slow so I later on ran with GPU)
+I want to show it to my friend with my MacBook so I set up the environment on my laptop. 
 
 I was blocked by GFW for the last step, so I went to the cafeteria and used IPv6 instead (sigh).
 
@@ -76,6 +79,18 @@ I checked the code and in `common.py`, I modified one line of `get_layer_output_
 `f = K.function([input, K.learning_phase()], (output, ))`
 
 then it works. (probably it is because the TensorFlow version is still not correct? Maybe the easiest solution is to ask them for their version name)
+
+## Run with GPU
+
+Indeed CPU was unbearably slow so I later decided to run with GPU, but I failed to achieve that. The error message was:
+
+```python
+  File "/home/hanezu/anaconda/envs/deepsound-genre-recog/lib/python2.7/site-packages/tensorflow/python/pywrap_tensorflow.py", line 24, in swig_import_helper
+    _mod = imp.load_module('_pywrap_tensorflow', fp, pathname, description)
+ImportError: libcudart.so.7.5: cannot open shared object file: No such file or directory
+```
+
+It seems that Tensorflow 0.10 cannot run on my cuda 8.0. But mixing cuda 7.5 and 8.0 seems to be such a pain that I gave up. (Hoping there will be a CUDA environment manager like Anaconda!)
 
 
 # Music recommendation by Keunwoo Choi
@@ -113,7 +128,7 @@ The music_tagger_crnn model is similar to the work of DeepSound, but predicting 
 
 The author suggests [compact_cnn](https://github.com/keunwoochoi/music-auto_tagging-keras/tree/master/compact_cnn) over music_tager_cnn and music_tagger_crn since the latter ones are his old works.
 
-### Run compact_cnn
+### Configure compact_cnn
 
 Keunwoo Choi wrote a package for on-the-fly calculation of STFT/melspectrograms called [kapre (Keras Audio Preprocessors)](https://github.com/keunwoochoi/kapre). 
 

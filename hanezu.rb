@@ -76,12 +76,20 @@ class Hanezu < Thor
     end
   end
 
-  desc "lsimg", "list the latest image added to the images folder and return its link in markdown"
-  def lsimg()
-    latest_folder = Dir.glob("images/*/").max_by {|f| File.mtime(f)}
-    latest_img = Dir.glob("#{latest_folder}*").max_by {|f| File.mtime(f)}
-    img_name = File.basename(latest_img, ".*")
-    print "![#{img_name}]({{ site.github.url }}/#{latest_img})\n"
+  option :folder_num, :type => :numeric, :default => 1, :aliases => 'f'
+  option :image_num_per_folder, :type => :numeric, :default => 1, :aliases => 'n'
+  desc "lsi", "list the latest images added to the images folder and return its link in markdown format"
+
+  def lsi()
+    latest_folders = Dir.glob("images/*/").max_by(options[:folder_num]) { |f| File.mtime(f) }
+    latest_folders.each_with_index do |latest_folder, idx|
+      latest_imgs = Dir.glob("#{latest_folder}*").max_by(options[:image_num_per_folder]) { |f| File.mtime(f) }
+      print "#{idx}. #{latest_folder}\n"
+      latest_imgs.each do |latest_img|
+        img_name = File.basename(latest_img, ".*")
+        print "![#{img_name}]({{ site.github.url }}/#{latest_img})\n"
+      end
+    end
   end
 
   # TODO: insert picture into post
