@@ -13,7 +13,7 @@ module JournalModule
         buffer << '---'
         buffer << 'layout: post'
         buffer << "title: \"#{title.gsub(/-/, ' ')}\""
-        buffer << 'categories: journal'
+        # buffer << 'categories: journal'
         buffer << 'tags: []'
 
         if has_img

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Using both Python 2 and 3"
-categories: journal
 tags: [anaconda, python]
 ---
 

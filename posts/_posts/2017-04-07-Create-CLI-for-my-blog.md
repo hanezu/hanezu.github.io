@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Create CLI for my blog"
-categories: journal
 tags: [Ruby,CLI]
 ---
 

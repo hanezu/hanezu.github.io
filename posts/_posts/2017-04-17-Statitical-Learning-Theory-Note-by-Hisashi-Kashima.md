@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Statitical Learning Theory Note by Hisashi Kashima"
-categories: journal
 tags: [course_note]
 ---
 

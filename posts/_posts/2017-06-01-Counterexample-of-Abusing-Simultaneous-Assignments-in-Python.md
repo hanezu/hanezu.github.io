@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Counterexample of Abusing Simultaneous Assignments in Python"
-categories: journal
 tags: [Python]
 ---
 

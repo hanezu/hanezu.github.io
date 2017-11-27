@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Replace derivatives in back propagation"
-categories: journal
 tags: [backprop]
 image:
   feature: 

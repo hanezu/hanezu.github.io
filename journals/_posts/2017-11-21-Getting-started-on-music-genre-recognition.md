@@ -1,13 +1,10 @@
 ---
 layout: post
 title: "Getting started on music genre recognition"
-categories: journal
 tags: []
 ---
 
 Per my friend's interest on deep learning based music recommendation, I decided to test some available idea on music classification (which is named Music Genre Recognition instead, and generally using CV liked models such as CNN).  
-
-*This post is under construction*
 
 1. TOC
 {:toc}
@@ -18,6 +15,11 @@ My friend shared a Chinese version of the blog [Spotify’s Discover Weekly: How
 # Music Genre Recognition by DeepSound
 
 Since Sander was unable to share his code, I go on to [Music Genre Recognition](http://deepsound.io/music_genre_recognition.html) by Piotr Kozakowski & Bartosz Michalak from DeepSound in 2016 implementing the paper [Deep Image Features in Music Information Retrieval](http://ijet.pl/index.php/ijet/article/view/10.2478-eletel-2014-0042/53) in 2014. The cool part of this project is that not only did they share their [codes](https://github.com/deepsound-project/genre-recognition) but they also have a great front end to showcase ([Demo](http://deepsound.io/genres/)). They also shared the front end so it is possible to download and try the music analysis on your own piece of music. The model is CRNN in Keras and capable of Live Music Genre Recognition.
+
+
+One way to interpret how CNN works in music is to make an analogy of the 2D-conv in music classification to the 3D-conv in video classification, where the second axis of the convolutional kernel exploits the temporal structure of a music. 
+
+And therefore, as an effective way to aggregate global temporal information, an RNN model built on top of the local CNN might help to classify the whole music.
 
 ## Run their code
 
@@ -92,7 +94,7 @@ then it works. (probably it is because the TensorFlow version is still not corre
  - Original: pretrain a model for one task, and finetune it for other tasks.
  - Here: train a model for a task and use it as feature extractor for other tasks.
  
- The difference is, while the parameters of the model is generally modified when applied to other tasks, here the model's parameters are fixed. 
+i.e. while the parameters of the model is generally modified when applied to other tasks, here the model's parameters are fixed. 
  
  Instead, the author suggested a inspiring idea that different tasks tend to emphasize on the features of different layers.
 
@@ -101,7 +103,8 @@ then it works. (probably it is because the TensorFlow version is still not corre
 
 ## Music Tagging
 
-Another work is on [Music Tagging](https://github.com/keunwoochoi/music-auto_tagging-keras) in Jan '17, a little bit earlier than his work for Transfer Learning. It reminded me of [I2V](https://github.com/rezoo/illustration2vec).
+Another work is on [Music Tagging](https://github.com/keunwoochoi/music-auto_tagging-keras) ([arXiv: CONVOLUTIONAL RECURRENT NEURAL NETWORKS FOR MUSIC CLASSIFICATION](https://arxiv.org/pdf/1609.04243.pdf)) in Jan '17, a little bit earlier than his work for Transfer Learning. It reminded me of [I2V](https://github.com/rezoo/illustration2vec).
+
 
 ![Models](https://raw.githubusercontent.com/keunwoochoi/music-auto_tagging-keras/master/imgs/diagrams.png)
 *Left: compact_cnn, music_tager_cnn. Right: music_tagger_crnn*
@@ -114,13 +117,39 @@ The author suggests [compact_cnn](https://github.com/keunwoochoi/music-auto_tagg
 
 Keunwoo Choi wrote a package for on-the-fly calculation of STFT/melspectrograms called [kapre (Keras Audio Preprocessors)](https://github.com/keunwoochoi/kapre). 
 
+### Tensorflow Implementation
 
+While K Choi used Theano, I also found a [Tensorflow Implementation](https://github.com/meetshah1995/crnn-music-genre-classification) of this work.
 
+# Other public repos
 
+## Deep Audio Classification
 
+[A project by despoisj](https://github.com/despoisj/DeepAudioClassification) in TensorFlow (and his [blog](https://chatbotslife.com/finding-the-genre-of-a-song-with-deep-learning-da8f59a61194)).
 
+![Pipeline](https://raw.githubusercontent.com/despoisj/DeepAudioClassification/master/img/pipeline.png)
 
+This implementation plainly used CNN to classify slices of the spectrogram of a music and combine the results into the class of the music.
 
+It is possible to train this model with your personal music library, just by placing the mp3 files at the data path and run the code.
+
+It seems that I can also predict the class of a new piece of music (although unable to manipulate the genre information in the mp3 files though) without writing additional codes.
+
+## MusicGenreClassification
+
+[A project by mlachmish](https://github.com/mlachmish/MusicGenreClassification) in TensorFlow that almost implemented Sander Dieleman's blog.
+
+# Current research
+
+## Non-local Neural Networks
+
+A new work on video classification, [Non-local Neural Networks](https://arxiv.org/pdf/1710.10121) by Xiaolong Wang suggested an approach to exploit the temporal structure of the data by adding non-local blocks after some convolutional layers in plain CNN so that the local model can now put attention on some related information even across large time-space gap.
+
+Actually he demonstrated the effectiveness of CNN on music classification, which I doubted from the beginning of my research on music classification. 
+
+This is in accordance with another point X Wang made that, recently there emerged a trend of using feedforward (i.e., non-recurrent) networks for modeling sequences in speech and language, e.g. WaveNet and Seq2Seq.
+
+So feedforward approach might be an appropriate first step into the task of music classification, and adding non-local blocks might both enhance and simplify the feedforward model.
 
 
 

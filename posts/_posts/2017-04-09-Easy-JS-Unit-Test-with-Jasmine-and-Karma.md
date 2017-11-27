@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Easy JS Unit Test with Jasmine and Karma"
-categories: journal
 tags: [Jasmine,Karma]
 ---
 
