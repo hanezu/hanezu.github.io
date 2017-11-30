@@ -4,11 +4,13 @@ require "thor"
 require "./scripts/post"
 require "./scripts/journal"
 require "./scripts/error"
+require "./scripts/const"
 
 class Hanezu < Thor
   include PostModule
   include JournalModule
   include ErrorModule
+  include ConstantModule
 
   option :latex, :type => :boolean, :aliases => 'l'
   option :image, :type => :boolean, :aliases => 'i'
@@ -40,17 +42,34 @@ class Hanezu < Thor
     Post.rename(post, name)
   end
 
-  desc "ls", "list posts"
+  option :image, :type => :boolean, :aliases => 'i', :desc => "list the latest images added to the images folder and return its link in markdown format"
+  option :audio, :type => :boolean, :aliases => 'a', :desc => "list the latest audios added to the audios folder and return its link in markdown format"
+  option :video, :type => :boolean, :aliases => 'v', :desc => "list the latest videos added to the videos folder and return its link in markdown format"
+  option :folder_num, :type => :numeric, :default => 1, :aliases => 'f'
+  option :num_per_folder, :type => :numeric, :default => 1, :aliases => 'n'
+  desc "ls", "list (images, videos. default posts)"
 
-  def ls(length=10)
-    posts = get_posts
-    size = posts.size
-    posts.each_with_index do |f, idx|
-      ridx = size - idx # reversed index
-      if ridx > Integer(length)
-        next
+  def ls()
+    if options[:image]
+      ls_folder("images/*/", options[:folder_num], options[:num_per_folder]) do |latest_img|
+        img_name = File.basename(latest_img, ".*")
+        print "![#{img_name}]({{ site.github.url }}/#{latest_img})\n"
       end
-      puts "%2d: #{Post.parse_title(f)}" % ridx
+    elsif options[:audio]
+      ls_media(:audio, options[:folder_num], options[:num_per_folder])
+    elsif options[:video]
+      ls_media(:video, options[:folder_num], options[:num_per_folder])
+    else
+      # default: list posts
+      posts = get_posts
+      size = posts.size
+      posts.each_with_index do |f, idx|
+        ridx = size - idx # reversed index
+        if ridx > Integer(option[:num_per_folder])
+          next
+        end
+        puts "%2d: #{Post.parse_title(f)}" % ridx
+      end
     end
   end
 
@@ -76,22 +95,6 @@ class Hanezu < Thor
     end
   end
 
-  option :folder_num, :type => :numeric, :default => 1, :aliases => 'f'
-  option :image_num_per_folder, :type => :numeric, :default => 1, :aliases => 'n'
-  desc "lsi", "list the latest images added to the images folder and return its link in markdown format"
-
-  def lsi()
-    latest_folders = Dir.glob("images/*/").max_by(options[:folder_num]) { |f| File.mtime(f) }
-    latest_folders.each_with_index do |latest_folder, idx|
-      latest_imgs = Dir.glob("#{latest_folder}*").max_by(options[:image_num_per_folder]) { |f| File.mtime(f) }
-      print "#{idx}. #{latest_folder}\n"
-      latest_imgs.each do |latest_img|
-        img_name = File.basename(latest_img, ".*")
-        print "![#{img_name}]({{ site.github.url }}/#{latest_img})\n"
-      end
-    end
-  end
-
   # TODO: insert picture into post
 
   no_commands do
@@ -103,6 +106,26 @@ class Hanezu < Thor
     def get_posts
       # in newest order
       Dir.glob(Post._posts('*.md')).sort_by { |f| File.mtime(f) }
+    end
+
+    def ls_folder(folder, folder_num, num_per_folder)
+      latest_folders = Dir.glob(folder).max_by(folder_num) { |f| File.mtime(f) }
+      latest_folders.each_with_index do |latest_folder, idx|
+        latest_media = Dir.glob("#{latest_folder}*").max_by(num_per_folder) { |f| File.mtime(f) }
+        print "#{idx}. #{latest_folder}\n"
+        latest_media.each do |latest_medium|
+          yield latest_medium
+        end
+      end
+    end
+
+    def ls_media(type, folder_num, num_per_folder)
+      extensions = CONST::EXTENSIONS[type] or raise "Non-defined media type: #{type}"
+      ls_folder("#{type}s/*/", folder_num, num_per_folder) do |latest_file|
+        ext = File.extname latest_file
+        format = extensions[ext] or raise "Non-defined extension: #{ext}"
+        print "{% include media.html type='#{type}' src='#{latest_file}' format='#{format}' %}\n"
+      end
     end
   end
 end

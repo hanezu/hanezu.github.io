@@ -16,7 +16,7 @@ This blog will record what I found necessary or interesting when learning to use
 
 ## Tweet
 
-Sometimes I come across a good idea and would like to write a blog about it, [like an obscure mistake in programming]({{ site.baseurl }}{% post_url 2017-06-01-Counterexample-of-Abusing-Simultaneous-Assignments-in-Python %}).
+Sometimes I come across a good idea and would like to write a blog about it, like an obscure mistake in programming.
 
 Other time I would start a great project (might not finish ever) and record how I solve some problems (or what I cannot solve) along the way.
 

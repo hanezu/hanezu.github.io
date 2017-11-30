@@ -1,0 +1,17 @@
+{% if include.type == 'audio' %}
+  <audio controls>
+    <source src="{{ site.github.url }}/{{ include.src }}" type="{{ include.format }}">
+    <p>Your browser does not support HTML5 audio. Here is a <a href="{{ site.github.url }}/{{ include.src }}">link to the video</a> instead.</p>
+  </audio>
+{% elsif include.type == 'video' %}
+  <video controls>
+    <source src="{{ site.github.url }}/{{ include.src }}" type="{{ include.format }}">
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="{{ site.github.url }}/{{ include.src }}">link to the video</a> instead.</p>
+  </video>
+{% elsif include.type == 'youtube' %}
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ include.id }}" frameborder="0" allowfullscreen></iframe>
+{% elsif include.type == 'vimeo' %}
+  <iframe src="https://player.vimeo.com/video/{{ include.id }}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{% else %}
+  error loading media
+{% endif %}

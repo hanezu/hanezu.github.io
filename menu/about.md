@@ -9,7 +9,7 @@ This is a blog on deep learning, math, programming, and else.
 
 I will sometimes assume my readers to have relevant knowledge for the above topics.
 
-Archived blogs are [here](https://hanezu.github.io/menu/archive.html)
+Archived blogs are [here](https://hanezu.github.io/menu/archive.html).
 
 # About me
 
