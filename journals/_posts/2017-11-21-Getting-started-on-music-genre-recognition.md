@@ -163,7 +163,15 @@ It was because I used Python 3 (since he used `print` with surrounding parenthes
 
 To be secure, I switched to Python 2.
 
-### Example 5-1
+### Example 5-1: is there anyone singing?
+
+In this example, we identify whether the singer was singing at a specific time of an audio. 
+
+To achieve this, we train an RNN to, at any time in an audio, classify
+Here, from [the homepage of Jamendo](http://www.mathieuramona.com/wp/data/jamendo/):
+- sing: segments containing singing voice or spoken voice (generally over an instrumental background)
+- nosing: pure instrumental (or silence) segments with no voice.
+
 
 It was wierd that `datasets` in `Kapre` package seems to have forgot `import os` and raised `NameError: name 'os' is not defined`. 
 I solved it by `cd ~/anaconda/envs/dl4mir/lib/python2.7/site-packages/kapre-0.1.2.1-py2.7.egg/kapre` and added `import os` to `datasets.py`.
@@ -176,7 +184,13 @@ I tried to `pip install h5py` but it returned `Requirement already satisfied: h5
 
 *Update: in fact I made a stupid mistake. I did not deactivate and re-activate my environment after I changed the python version. The result was that whatever I tried to `pip install`, the pip would install package for the former python version.*
 
-after 30 epochs each, I got 75% accuracy with CRNN, 78% with LSTM and 80% with bi-directional LSTM. 
+after 30 epochs each, the training result was
+
+Model | Accuracy
+--- | ---
+CRNN | 75% 
+LSTM |  78% 
+bi-LSTM | 80%
 
 Let's pick a song from the test dataset and see the performance of the bi-directional LSTM.
 
@@ -185,11 +199,8 @@ Let's pick a song from the test dataset and see the performance of the bi-direct
 ![jamendo_result]({{ site.github.url }}/images/Getting-started-on-music-genre-recognition/jamendo_result.png)
 *The bi-LSTM classification result on sing and nosing, compared with ground truth.*
 
-Here, from [the homepage of Jamendo](http://www.mathieuramona.com/wp/data/jamendo/):
-- sing: segments containing singing voice or spoken voice (generally over an instrumental background)
-- nosing: pure instrumental (or silence) segments with no voice.
 
-As can be seen from the above figure, bi-LSTM did a better job than the percentage of accuracy suggested. 
+As can be seen from the above figure, bi-LSTM did a better job than the percentage of accuracy suggested. ([MFCCs](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum) baseline is 91.7% and SOTA convnet can achieve 97.2%) 
 
 Two side notes on the plot:
  
@@ -199,6 +210,33 @@ Two side notes on the plot:
  
 It was a bit slow since I did not enable GPU. However, later I installed GPU-version of TensorFlow following the instruction [on the homepage](https://www.tensorflow.org/install/install_linux), but it did not speed up much (GPU memory was used up but utility hardly went over 40%).
 
+# Example 5-2
+
+after 5 epochs each, the training result was
+
+Model | Accuracy
+--- | ---
+multi_kernel | 38% 
+CRNN |  39% 
+CNN3x3 | 34%
+CNN1D | 30%
+
+The models must be underfitting. Let's train it with 100 epochs.
+
+Model | Accuracy | Epoch | Accuracy' | Epoch' 
+--- | --- | ---
+multi_kernel | 47% | 17 | 47.1% | 72 
+CRNN |  44% | 13 | 45.6% | 65
+CNN3x3 | 42% | 21 | 44.7% | 83
+CNN1D | 25% | 8 | 40.4% | 89
+
+By default, `keras.callbacks.EarlyStopping(patience=5)` triggered early stop when validation loss has plateaued for 5 epochs. Since the default setting stopped any model in 20 epochs, I configured the patience to be 50 epochs, corresponding to the column of Accuracy' and Epoch'.
+
+Although I did not finda a SoTA accuracy on fma_small dataset, since it is a [8,000 tracks of 30s, 8 balanced genres (GTZAN-like)](https://github.com/mdeff/fma#data), I searched the GTZAN SoTA accuracy, which is 94.5%, and MFCCs baseline is 66.0%.
+
+It is interesting to note that the baseline model CNN1D (corresponding to CNN with 2D-conv in video classification) was able to reach 40.4% after patient training. It means that the attempt to make use of temporal information does not beat an average of posterior of classification over the discrete spectrogram by a large margin. 
+
+It might be the case for video since you can probably guess the class of the video by just a snapshot, but not so natural when it comes to music. It seems to be a hard task to recognize the genre by a single chord or harmony, without temporal information such as tempo or key (well it is possible to guess the key from the chord).
 
 # Other public repos
 
