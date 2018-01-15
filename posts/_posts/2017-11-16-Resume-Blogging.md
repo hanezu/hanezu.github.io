@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Resume Blogging"
-tags: []
+tags: [Random]
 ---
 
 The reason I resume my blog after several months is [LeNPaul](https://github.com/LeNPaul)'s new update that integrates features such as 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Create CLI for my blog"
-tags: [Ruby,CLI]
+tags: [Programming]
 ---
 
 If you are kind enough to check my code for hosting this blog, you can see that I am using some Ruby scripts to create post templates, or rename post.

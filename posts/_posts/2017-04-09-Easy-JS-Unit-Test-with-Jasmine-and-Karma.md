@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Easy JS Unit Test with Jasmine and Karma"
-tags: [Jasmine,Karma]
+tags: [Programming]
 ---
 
 Jasmine is the testing framework. Karma is the test runner.

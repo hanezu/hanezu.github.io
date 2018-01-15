@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Counterexample of Abusing Simultaneous Assignments in Python"
-tags: [Python]
+tags: [Programming]
 ---
 
 <script type="text/javascript" async

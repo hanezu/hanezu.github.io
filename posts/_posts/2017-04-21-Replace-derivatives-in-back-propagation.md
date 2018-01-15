@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Replace derivatives in back propagation"
-tags: [backprop]
+tags: [DL, Math]
 image:
   feature: 
   teaser: Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg

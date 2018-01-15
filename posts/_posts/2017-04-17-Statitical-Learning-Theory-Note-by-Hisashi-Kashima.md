@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Statitical Learning Theory Note by Hisashi Kashima"
-tags: [course_note]
+tags: [DL]
 ---
 
 <script type="text/javascript" async

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vectorized cs231n Beautifully with numpy"
-tags: [machine learning,numby]
+tags: [DL, Programming]
 ---
 
 I started to work on cs231n assigments recently. 

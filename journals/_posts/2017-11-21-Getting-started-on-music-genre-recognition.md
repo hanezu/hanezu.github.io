@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting started on Music Information Retrieval"
-tags: []
+tags: [DL]
 image:
   feature: 
   teaser: 

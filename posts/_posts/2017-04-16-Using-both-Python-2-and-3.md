@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using both Python 2 and 3"
-tags: [anaconda, python]
+tags: [Programming, DL]
 ---
 
 {:toc}
