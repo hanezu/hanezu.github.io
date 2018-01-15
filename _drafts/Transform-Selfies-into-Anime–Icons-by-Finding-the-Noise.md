@@ -47,7 +47,7 @@ where the feature map is extracted by [I2V](https://github.com/rezoo/illustratio
 
 ## Implementation
 
-I 
+
 
 # Encoder Recipe
 
@@ -58,6 +58,19 @@ i.e. I want to find an Encoder that map
 ## MakeGirlsMoe Generator
 
 ## Danbooru Generator
+
+
+## Feature Matching loss
+
+Since I do not have corresponding images, I can only tried the FM loss on randomly generated images.
+
+The result is like 
+![540]({{ site.github.url }}/images/Transform-Selfies-into-Anime–Icons-by-Finding-the-Noise/540.png)
+
+![540_encoder]({{ site.github.url }}/images/Transform-Selfies-into-Anime–Icons-by-Finding-the-Noise/540_encoder.png)
+*encoder is still functioning!*
+
+ It may be that encoder just map all the data from celebA to similar noises.
 
 
 # Encoder Adversarial Networks

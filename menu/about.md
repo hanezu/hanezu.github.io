@@ -5,9 +5,7 @@ title: About
 
 # The blog
 
-This is a blog on deep learning, math, programming, and else.
-
-I will sometimes assume my readers to have relevant knowledge for the above topics.
+This is a blog of my thoughts or solutions on deep learning, blockchain, math, programming, and else.
 
 Archived blogs are [here](https://hanezu.github.io/menu/archive.html).
 
