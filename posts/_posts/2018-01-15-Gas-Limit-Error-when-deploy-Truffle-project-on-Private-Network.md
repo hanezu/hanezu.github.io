@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Gas Limit Error when deploy Truffle project on Private Network"
-tags: [Blockchain]
+tags: [BlockChain]
 ---
 
 The most annoying error ever when I deploy contracts with truffle:
