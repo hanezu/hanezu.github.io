@@ -4,7 +4,7 @@ title: "Gas Limit Error when deploy Truffle project on Private Network"
 tags: [BlockChain]
 ---
 
-The most annoying error ever when I deploy contracts with truffle:
+The most annoying error ever when deploying contracts with truffle is:
 
 ```Error encountered, bailing. Network state unknown. Review successful transactions manually.```
 
@@ -43,6 +43,8 @@ On the other hand, if it tells us that the gas limit is too low: `Error: intrins
  it does not have enough gas to deploy the contract. When it does deploy the contract but used up its gas so it cannot **save** the contract (I guess), it will raise `Error: The contract code couldn't be stored, please check your gas amount.` In both cases, we should set a higher gas limit.
 
 In this way, we can use binary search to find out the appropriate gas limit that pass the `truffle deploy`.
+
+When the deployment succeeds, we can check the Blocks or Transactions panel in Ganache, where we can find the gas used during deployment. The gas used should be a bit lower than the appropriate gas limit you just found. 
 
 ## Private Network
 
