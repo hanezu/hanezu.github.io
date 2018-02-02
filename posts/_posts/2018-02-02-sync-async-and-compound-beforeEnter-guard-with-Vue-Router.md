@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Synchronous, Ssynchronous, and Compound beforeEnter Guard with Vue Router"
+title: "Synchronous, Asynchronous, and Compound beforeEnter Guard with Vue Router"
 tags: [Front-end]
 ---
 
