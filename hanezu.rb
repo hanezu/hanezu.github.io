@@ -15,20 +15,22 @@ class Hanezu < Thor
   option :latex, :type => :boolean, :aliases => 'l'
   option :image, :type => :boolean, :aliases => 'i'
   option :draft, :type => :boolean, :aliases => 'd'
+  option :vim, :type => :boolean, :aliases => 'v'
   desc "new JOURNAL", "create new Journal JOURNAL"
 
-  def new(journal, open_with=nil)
+  def new(*name)
+	journal = name.join('-')
+	journal = journal.gsub(/[^a-zA-Z0-9\-]/, '')  # only remain letters, number and hyphen
     # filename = Name.filename_from_title(journal)
     path = Post.path_of(journal)
     Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft]) unless File.file?(path)
-    case open_with
-      when %w{ vim v }
-        Post.vim path
-      when %w{ edit macvim mac m e }
-        Post.edit path
-      else
-        puts "Create file #{path} successfully."
+	if options[:vim]
+	  Post.vim path
+	else
+	  # by default, use macvim to open the post
+      Post.edit path
     end
+	puts "Create file #{path} successfully."
   end
 
   desc "rename", "rename INDEX (default 1) journal to NAME (default the title of the journal)"
