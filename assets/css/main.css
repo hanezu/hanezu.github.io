@@ -14,20 +14,25 @@ body {
     font-size: 14px;
     line-height: 1.5rem;
   }
+
   body h1 {
     font-size: 1.5rem;
   }
 }
 
-h1{
-  font-size: 1.5rem;
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.1rem;
 }
 
 h1 a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1:not(.title), h2, h3, h4, h5, h6 {
   font-family: "Quattrocento Sans", sans-serif;
   color: #333;
 }
@@ -64,7 +69,7 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   /* for large screen */
-  width: 1366px;
+  width: 1100px;
 }
 
 @media (max-width: 1366px) {
@@ -96,7 +101,7 @@ blockquote {
 }
 
 .masthead a:hover {
-  color:black;
+  color: black;
 }
 
 .masthead-title a {
@@ -120,7 +125,7 @@ blockquote {
   margin-bottom: 25px;
 }
 
-.thumbnail-container img{
+.thumbnail-container img {
   margin-top: -11.5%;
   margin-bottom: -11.5%;
 }
@@ -130,7 +135,7 @@ blockquote {
 */
 
 .post-container {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .posts {
@@ -141,11 +146,11 @@ blockquote {
 
 .post-date {
   display: block;
-  margin-top:3px;
+  margin-top: 3px;
   margin-bottom: 1rem;
   color: #9a9a9a;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size:0.8rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 30rem) {
@@ -175,6 +180,7 @@ blockquote {
   overflow: hidden;
   font-family: 'Quattrocento Sans', sans-serif;
   text-align: center;
+  margin-top: -3rem;
 }
 
 .pagination a {
@@ -182,20 +188,46 @@ blockquote {
 }
 
 .pagination-button {
-  color: #999;
-  border: 1px solid #e0e0e0;
-  padding: 15px 45px;
+  padding-right: 6px;
+  margin: 20px;
   display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
+  color: #919191;
+}
+
+.pagination-button:not(.pagination-active):hover {
+  color: #919191;
 }
 
 .pagination-active {
-  color: black;
+  color: #313131;
 }
 
 .pagination-active:hover {
   background-color: #e0e0e0;
+}
+
+.fa-arrow-circle-o-right {
+  padding: 5px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 40px;
+  height: 40px;
+  font-size: 3em !important;
+}
+
+.fa-arrow-circle-o-left {
+  padding: 5px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 40px;
+  height: 40px;
+  font-size: 3em !important;
 }
 
 /*
@@ -251,6 +283,7 @@ blockquote {
     float: left;
     padding-top: 0px;
   }
+
   .menu-content {
     margin-bottom: 5px;
   }
@@ -262,32 +295,33 @@ blockquote {
 
 pre,
 code {
-    font-size: 0.8rem;
-    border-radius: 3px;
-    background-color: #f5f5f5;
-    font-family: "Source Code Pro";
+  font-size: 0.8rem;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  font-family: "Source Code Pro";
 }
 
 code {
-    padding: 1px 5px;
+  padding: 1px 5px;
 }
 
 pre {
-    padding: 8px 12px;
-    overflow-x: auto;
+  padding: 8px 12px;
+  overflow-x: auto;
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
-    }
+  >
+  code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .highlight .lineno {
   color: #aaa;
-  display:inline-block;
+  display: inline-block;
   padding: 0 5px;
-  border-right:1px solid #ccc;
+  border-right: 1px solid #ccc;
 }
 
 .highlight pre code {
@@ -300,19 +334,20 @@ pre {
 /**
  * Tables
  */
- table {
-     border-collapse: collapse;
-     margin-bottom: 30px;
-     width: 100%;
- }
+table {
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  width: 100%;
+}
 
- table, th, td {
-     border: 1px solid black;
- }
- th, td {
-     padding: 15px;
-     text-align: left;
- }
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
 
 /*
   Social media icons
@@ -324,145 +359,145 @@ pre {
 
 .fa-envelope {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-envelope:hover {
-	color: #f39c12;
+  color: #f39c12;
 }
 
 .fa-twitter {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-twitter:hover {
-	color: #00aced;
+  color: #00aced;
 }
 
 .fa-instagram {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-instagram:hover {
-	color: #375989;
+  color: #375989;
 }
 
 .fa-github {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-github:hover {
-	color: #343434;
+  color: #343434;
 }
 
 .fa-linkedin {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-linkedin:hover {
-	color: #0073a4;
+  color: #0073a4;
 }
 
 .fa-facebook {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-facebook:hover {
-	color: #3d5b99;
+  color: #3d5b99;
 }
 
 .fa-google-plus {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-google-plus:hover {
-	color: #e64a41;
+  color: #e64a41;
 }
 
 .fa-pinterest {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-pinterest:hover {
-	color: #bd081c;
+  color: #bd081c;
 }
 
 .fa-medium {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-medium:hover {
-	color: #00AB6C;
+  color: #00AB6C;
 }
 
 .fa-codepen {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-codepen:hover {
-	color: black;
+  color: black;
 }
 
 .fa-rss-square {
   padding: 5px;
-	-o-transition:.5s;
-  	-ms-transition:.5s;
-  	-moz-transition:.5s;
-  	-webkit-transition:.5s;
-  	transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .fa-rss-square:hover {
-	color: #ff6600;
+  color: #ff6600;
 }
 
 /*
@@ -475,4 +510,14 @@ display image caption
 img + em {
   display: block;
   text-align: center;
+}
+
+/*
+round avatar
+*/
+.avatar {
+  vertical-align: middle;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
 }

@@ -3,18 +3,15 @@ layout: page
 title: About
 ---
 
-# The blog
+## The blog
 
 This is a blog of my thoughts or solutions on deep learning, blockchain, math, programming, and else.
 
 Archived blogs are [here](https://hanezu.github.io/menu/archive.html).
 
-# About me
+## About me
 
 - Math undergrad @ Fudan Univ '14 \- '18. 
-- Exchange student @ Kyoto Univ '16 \- '17. 
-- Interned at and plan to join [PaintsChainer](http://paintschainer.preferred.tech/index_en.html) @[PFN](https://www.preferred-networks.jp/) in Summer '18
-- Before that, interned at [Atmoph](https://atmoph.com/en)
-- Before that, interned at a private fund and traded futures.
-- Member of [MakeGirlsMoe](http://make.girls.moe/)
+- Interned at and plan to join [PaintsChainer](http://paintschainer.preferred.tech/index_en.html) @[PFN](https://www.preferred-networks.jp/) in Summer '18.
+- Member of [MakeGirlsMoe](https://make.girls.moe/), started and leading the Project [Crypko](https://crypko.ai).
 

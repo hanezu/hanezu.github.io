@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>
+<h1 class="title">
   {{ page.title }}
 </h1>
 
@@ -26,7 +26,7 @@ layout: default
   {% if page.author %}
     {{ page.author }}
   {% else %}
-    {{ site.data.authors.primary.name }}
+    {{ site.data.author.name }}
   {% endif %}
 </span>
 
