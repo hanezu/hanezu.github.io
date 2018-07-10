@@ -1,0 +1,122 @@
+/* Space out content a bit */
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.content,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: .05rem solid #e5e5e5;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  font-size: small;
+  border-top: .05rem solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  padding: 10px 0px 10px 0px !important;
+  background: #ffffff;
+  text-align: center;
+}
+
+.jumbotron h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.jumbotron p {
+  font-size: medium;
+  text-align: left;
+}
+
+.content {
+  margin: 3rem 0;
+}
+
+.content p + h4 {
+  margin-top: 1.5rem;
+}
+
+
+.post-text {
+  color: grey;
+  font-size: medium;
+}
+
+.post-text p {
+  margin: 0.8em 0;
+}
+
+.post-text.tutorial h1, h2, h3, h4 {
+  color: black;
+}
+
+.post-text.tutorial h1, h2 {
+  padding-bottom: .3em;
+  font-size: 2.25em;
+  line-height: 1.2;	  }
+
+.post-text.tutorial h2 {
+  font-size: 1.5em;
+  line-height: 1.225;
+}
+
+.post-text.tutorial p.block, p.strongBlock {
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  padding: 10px 30px 10px 30px;
+  background: #dddddd;
+}
+
+.post-text.tutorial p.strongBlock {
+  background: transparent;
+}
+
+.post-text.tutorial img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 400px;
+  vertical-align: middle;
+}
+
+.post-text.tutorial blockquote {
+  margin: 0.8em 0;
+  border-left: 4px solid #dddddd;
+  padding: 10px;
+  color: #777777;
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  .post-text p.block, p.strongBlock {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .post-text ol {
+    margin-left: -15px;
+  }
+}
