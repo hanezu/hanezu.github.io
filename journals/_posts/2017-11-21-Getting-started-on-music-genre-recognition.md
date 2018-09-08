@@ -2,9 +2,6 @@
 layout: post
 title: "Getting started on Music Information Retrieval"
 tags: [DL]
-image:
-  feature: 
-  teaser: 
 ---
 
 Per my friend's interest on the application of deep learning on music, I decided to try some state-of-the-art in the area of Music Information Retrieval.

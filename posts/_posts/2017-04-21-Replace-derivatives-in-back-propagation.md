@@ -2,9 +2,7 @@
 layout: post
 title: "Replace derivatives in back propagation"
 tags: [DL, Math]
-image:
-  feature: 
-  teaser: Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg
+image: Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg
 ---
 
 <script type="text/javascript" async

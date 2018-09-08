@@ -21,10 +21,10 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Hanezu"
-description:	       "ようこそジプシー、我が錬丹の部屋に"
+description:	       "眩しさだけは、忘れなかった。"
 author:              "Hanezu"
 
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
-#   path:	     rss-feed.xml
+#  path: rss-feed.xml
