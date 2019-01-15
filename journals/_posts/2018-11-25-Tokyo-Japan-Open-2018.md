@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tokyo & Japan Open 2018"
+title: "Chess Open 2018"
 tags: []
 ---
 
@@ -29,4 +29,8 @@ Record the diagram id so that its possible to access these archived games via ht
 <iframe class="chess" border="0" frameborder="0" allowtransparency="true" width="603" height="465" src="//www.chess.com/emboard?id=4894500"></iframe>
 
 <iframe class="chess" border="0" frameborder="0" allowtransparency="true" width="603" height="465" src="//www.chess.com/emboard?id=4742990"></iframe>
+
+# Christmas Open 2018
+
+<iframe border="0" frameborder="0" allowtransparency="true" width="603" height="465" src="//www.chess.com/emboard?id=5024722"></iframe>
 
