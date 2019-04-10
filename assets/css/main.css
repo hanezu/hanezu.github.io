@@ -36,10 +36,26 @@ body {
 }
 
 h1 {
-  font-size: 1.2rem;
+  font-size: 2rem;
+}
+
+.homepage-title {
+  font-size: 2rem;
 }
 
 h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+.related-posts-title {
+  font-size: 1.5rem;
+}
+
+.related-posts-items {
   font-size: 1.1rem;
 }
 
@@ -230,7 +246,7 @@ hr {
   background-color: #e0e0e0;
 }
 
-.fa-arrow-circle-o-right {
+.fa-chevron-right, .fa-chevron-left {
   padding: 5px;
   -o-transition: .5s;
   -ms-transition: .5s;
@@ -239,19 +255,7 @@ hr {
   transition: .5s;
   width: 40px;
   height: 40px;
-  font-size: 3em !important;
-}
-
-.fa-arrow-circle-o-left {
-  padding: 5px;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
-  width: 40px;
-  height: 40px;
-  font-size: 3em !important;
+  font-size: 2em !important;
 }
 
 /*

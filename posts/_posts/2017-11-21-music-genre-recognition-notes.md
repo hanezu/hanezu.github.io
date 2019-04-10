@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Getting started on Music Information Retrieval"
+title: "Music Information Retrieval Notes"
 tags: [DL]
 ---
 
@@ -191,7 +191,7 @@ bi-LSTM | 80%
 
 Let's pick a song from the test dataset and see the performance of the bi-directional LSTM.
 
-{% include media.html type='audio' src='audios/Getting-started-on-music-genre-recognition/School.mp3' format='audio/mpeg' %}
+{% include media.html type='audio' src='assets/audios/Getting-started-on-music-genre-recognition/School.mp3' format='audio/mpeg' %}
 
 ![jamendo_result]({{ site.github.url }}/images/Getting-started-on-music-genre-recognition/jamendo_result.png)
 *The bi-LSTM classification result on sing and nosing, compared with ground truth.*
