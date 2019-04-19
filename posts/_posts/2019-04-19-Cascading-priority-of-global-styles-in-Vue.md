@@ -6,7 +6,7 @@ tags: [Programming]
 
 Since a `style` tag without a `scoped` attribute is global in Vue.js, we can write a selector in the child component to style the parent component. Like below ([Interactive Demo](https://codesandbox.io/embed/102x483y9q?fontsize=14))
 
-```
+```vue
 <!-- App.vue -->
 <template>
   <div id="app">
@@ -27,7 +27,7 @@ So, whenever there is a `HelloWorld` component appears in `App.vue`, the `backgr
 On the other hand, we can use `scoped style` to style current component without affecting its parents or children, and it should make sense that `scoped style` has a higher priority than global one.
 So if we add the following lines to `App.vue`, the `background-color` will be red.
 
-```
+```vue
 <!-- App.vue -->
 <style scoped>
 #app {
@@ -38,7 +38,7 @@ So if we add the following lines to `App.vue`, the `background-color` will be re
 
 However, what if we use `global style` instead of `scoped style`?
 
-```
+```vue
 <!-- App.vue -->
 <style>
 #app {
