@@ -32,10 +32,10 @@ Like this:
  
 ```
 
-So this must caused by my `pyenv-virtualenv` settings.
+So this must be caused by my `pyenv-virtualenv` settings.
 
 If you look carefully at the wrong terminal output again,
-You will find out that vscode actually activate the python environment for you twice:
+you will find out that vscode actually activate the python environment for you twice:
 before and after zsh is ready.
 
 # Solution
