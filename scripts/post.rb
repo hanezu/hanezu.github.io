@@ -81,7 +81,7 @@ module PostModule
       end
 
       def edit(post)
-        `open -a MacVim.app #{post}`
+        `edit #{post}`
       end
     end
   end

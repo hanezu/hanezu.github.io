@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "No 'Access-Control-Allow-Origin' header error triggered accidentally when using format_suffix_patterns in Django REST framework"
-tags: []
+tags: [Django]
 ---
 
 After I set up my Django backend with [django-cors-headers](https://github.com/ottoyiu/django-cors-headers),
