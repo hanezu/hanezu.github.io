@@ -106,16 +106,16 @@ But it doesn't matter.
 
 ## Affine layer
 
- ![my calculation for backprop dYdX and dYdW]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg)
+ ![my calculation for backprop dYdX and dYdW]({{ site.github.url }}/assets/img/Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg)
  
  and $\mathrm{d}Y/\mathrm{d}b$ actually needs more care,
  because actually a broadcast is going on here.
  
- ![my calculation for backprop dYdb]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/dYdb.jpg)
+ ![my calculation for backprop dYdb]({{ site.github.url }}/assets/img/Replace-derivatives-in-back-propagation/dYdb.jpg)
 
 ## Batch Norm layer
 
-![bachnorm backprop]({{ site.github.url }}/images/Replace-derivatives-in-back-propagation/batch_norm.jpg)
+![bachnorm backprop]({{ site.github.url }}/assets/img/Replace-derivatives-in-back-propagation/batch_norm.jpg)
  
 # To generalize
 

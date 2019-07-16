@@ -15,28 +15,64 @@ and set up my API.
 
 To be specific, assume my DRF (Django REST Framework) project is served at `my.server.host:12345`. 
 I created an `ANY` method with `Integration type` of `HTTP Proxy` and 
-`Endpoint URL` of `http://aoba.chara.moe:39429/{proxy}`. 
+`Endpoint URL` of `http://my.server.host:12345/{proxy}`. 
 Then I save the setup and deploy the API 
 (it is very important to deploy API everytime you do any edition!).
 
-# CORS error?
+# CORS error for GET request
 
-Having API Gateway set up, I attempted to call the API from my front-end website,
-with the following `403` response.
+Having API Gateway set up, I attempted to send a `GET` request to the API from my front-end website,
+but I received the following `403` response.
 
 ```
 Failed to load resource: the server responded with a status of 403 ()
+```
 
+which is followed by a CORS error.
+
+```
 Access to XMLHttpRequest at 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_ROUTE]' (redirected from 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_STAGE]/[API_ROUTE]') from origin 'https://my.front-end.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 
-The error message seemed to be a CORS error. 
 However, I already set up CORS in my DRF project using [django-cors-headers](https://github.com/ottoyiu/django-cors-headers),
 and direct access to the API did not cause any CORS error.
 
-# Solution
+What's more, I did not receive any request in my backend: 
+it seems that the request did not ever reach my server.
+
+# error for direct POST request
+
+When I send a `POST` request this time, I got a `500` error.
+This time, the request reached my server, and I saw the following error message:
+
+```
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to aoba.chara.moe:39429/crypkos/undefined/save/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+```
+
+# Solution: add a trailing slash to the endpoint URL
 
 It turned out that API Gateway will ignore the trailing slash of all incoming request (see [this thread](https://forums.aws.amazon.com/thread.jspa?messageID=749625)),
+so changing the `Endpoint URL` to `http://my.server.host:12345/{proxy}/` solve the problem.
+
+# Why the CORS error was thrown?
+
+The reason why the CORS error was thrown lies in the fact that a successful cross-site request is composed of a preflight request and an actual request.
+
+The following graph from [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) illustrates what is happening under the hood.
+
+![a successful cross-site request](https://mdn.mozillademos.org/files/16753/preflight_correct.png)
+
+In our case, the response to our preflight request was a `403`, therefore the CORS  
+
+![our case]({{ site.github.url }}/assets/img/2019-07-11-Deploy-Django-REST-Framework-project-using-API-Gateway/IMG_BE767282F17B-1.jpeg)
+
+Notice that if we shut down our DRF server, the preflight request will receive a response like:
+
+```
+OPTIONS https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_ROUTE] 403
+```
+
+Which is probably generated directly by API Gateway.
 
 
 
