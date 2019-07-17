@@ -33,6 +33,14 @@ body {
   body h1 {
     font-size: 1.5rem;
   }
+
+  body h2 {
+    font-size: 1.3rem;
+  }
+
+  body h3 {
+    font-size: 1.1rem;
+  }
 }
 
 h1 {
@@ -82,6 +90,8 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 5px;
+  margin: auto;
+  display: block;
 }
 
 blockquote {

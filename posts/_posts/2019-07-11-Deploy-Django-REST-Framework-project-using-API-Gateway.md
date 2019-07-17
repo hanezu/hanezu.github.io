@@ -19,7 +19,7 @@ I created an `ANY` method with `Integration type` of `HTTP Proxy` and
 Then I save the setup and deploy the API 
 (it is very important to deploy API everytime you do any edition!).
 
-# sending GET request
+# Sending GET request
 
 ## Front-end: 403 + CORS error
 
@@ -51,7 +51,7 @@ except a single [301](https://en.wikipedia.org/wiki/HTTP_301) response:
 it seems that the request was redirected once, but the redirected request did not ever reach my server. 
 Therefore the response to the redirected request were instead made by API Gateway.
 
-# 500 error for direct POST request
+# Sending POST request: 500 error
 
 When I send a `POST` request this time, I got a `500` error.
 This time, the request reached my server, and I saw the following error message:
@@ -65,7 +65,7 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 In short, it turned out that API Gateway will ignore the trailing slash of all incoming request (see [this thread](https://forums.aws.amazon.com/thread.jspa?messageID=749625)),
 so changing the `Endpoint URL` to `http://my.server.host:12345/{proxy}/` solve the problem.
 
-# Why the CORS error was thrown?
+## Why the CORS error was thrown?
 
 The reason why the CORS error was thrown lies in the fact that a successful cross-site request is composed of a preflight request and an actual request.
 
