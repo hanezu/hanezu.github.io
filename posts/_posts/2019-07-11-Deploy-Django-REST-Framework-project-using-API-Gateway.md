@@ -19,7 +19,9 @@ I created an `ANY` method with `Integration type` of `HTTP Proxy` and
 Then I save the setup and deploy the API 
 (it is very important to deploy API everytime you do any edition!).
 
-# 403 + CORS error for GET request
+# sending GET request
+
+## Front-end: 403 + CORS error
 
 Having API Gateway set up, I attempted to send a `GET` request to the API from my front-end website,
 but I received the following `403` response.
@@ -31,15 +33,23 @@ Failed to load resource: the server responded with a status of 403 ()
 which is followed by a CORS error.
 
 ```
-Access to XMLHttpRequest at 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_ROUTE]' (redirected from 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_STAGE]/[API_ROUTE]') from origin 'https://my.front-end.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
+Access to XMLHttpRequest at 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_ROUTE]/' (redirected from 'https://[API_ID].execute-api.ap-northeast-1.amazonaws.com/[API_STAGE]/[API_ROUTE]') from origin 'https://my.front-end.com' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 
 However, I already set up CORS in my DRF project using [django-cors-headers](https://github.com/ottoyiu/django-cors-headers),
 and direct access to the API did not cause any CORS error.
 
-What's more, I did not receive any request in my backend: 
-it seems that the request did not ever reach my server. 
-Therefore the response is probably made by API Gateway.
+## Back-end: one-time 301 response
+
+It is more confusing that I did not receive any request in my backend,
+except a single [301](https://en.wikipedia.org/wiki/HTTP_301) response: 
+
+```
+"GET /[API_ROUTE] HTTP/1.1" 301 0
+```
+
+it seems that the request was redirected once, but the redirected request did not ever reach my server. 
+Therefore the response to the redirected request were instead made by API Gateway.
 
 # 500 error for direct POST request
 
@@ -52,7 +62,7 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 
 # Solution: add a trailing slash to the endpoint URL
 
-It turned out that API Gateway will ignore the trailing slash of all incoming request (see [this thread](https://forums.aws.amazon.com/thread.jspa?messageID=749625)),
+In short, it turned out that API Gateway will ignore the trailing slash of all incoming request (see [this thread](https://forums.aws.amazon.com/thread.jspa?messageID=749625)),
 so changing the `Endpoint URL` to `http://my.server.host:12345/{proxy}/` solve the problem.
 
 # Why the CORS error was thrown?
@@ -62,11 +72,17 @@ The reason why the CORS error was thrown lies in the fact that a successful cros
 ![a successful cross-site request](https://mdn.mozillademos.org/files/16753/preflight_correct.png)
 *This graph from [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) illustrates what is happening under the hood for a successful cross-site request.*
 
-In our case, since the route does not exist (because of lacking the trailing slash!), the response to our preflight request was a `403` made by API Gateway, 
+In our case, since the route missed the trailing slash,
+the response to our preflight request was a `301` made by API Gateway.
+However, API Gateway did not add `[API_STAGE]` to the redirect response, 
+and pass the `301` response back to the front-end as-is.
+The front-end then send another preflight request, this time with the trailing slash, but **missing the API_STAGE**.
+
+As a result, API Gateway response a `403` directly,
 which, of course, contained no `Access-Control-Allow-Origin` header. 
 As a result, the actual request was blocked by the browser.
 
-![our case]({{ site.github.url }}/assets/img/2019-07-11-Deploy-Django-REST-Framework-project-using-API-Gateway/IMG_BE767282F17B-1.jpeg)
+![our case]({{ site.github.url }}/assets/img/2019-07-11-Deploy-Django-REST-Framework-project-using-API-Gateway/IMG_0333.jpg)
 *The preflight request cannot reach the server because API Gateway does not proxy for routes that do not exist.*
 
 Notice that if we shut down our DRF server, the preflight request will receive a `504 Network error communicating with endpoint` error,
