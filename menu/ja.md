@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Journal
+title: 日本語ブログ
 ---
 <ul class="posts">
-  {% for post in site.categories.journals %}
+  {% for post in site.categories.ja %}
 
     {% unless post.next %}
       <h3>{{ post.date | date: '%Y' }}</h3>
