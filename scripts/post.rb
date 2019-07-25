@@ -5,7 +5,10 @@ require_relative 'error'
 
 module PostModule
   class Post
-    POSTS_DIR = 'posts/_posts'
+    ENGLISH_DIR = 'posts/'
+    CHINESE_DIR = 'cn/'
+    JAPANESE_DIR = 'ja/'
+    POSTS_FOLDER = '_posts'
     DRAFT_DIR = '_drafts'
 
     class << self
@@ -28,11 +31,17 @@ module PostModule
         prefix + title.gsub(/ /, '-') + '.md'
       end
 
-      def path_of(title, is_draft=false)
+      def path_of(title, is_draft=false, is_chinese=false, is_japanese=false)
         File.join(if is_draft
                     DRAFT_DIR
                   else
-                    POSTS_DIR
+                    if is_chinese
+                      CHINESE_DIR
+                    elsif is_japanese
+                      JAPANESE_DIR
+                    else
+                      ENGLISH_DIR
+                    end + POSTS_FOLDER
                   end,
                   filename_of(title, is_draft))
       end

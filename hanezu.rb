@@ -16,21 +16,20 @@ class Hanezu < Thor
   option :image, :type => :boolean, :aliases => 'i'
   option :draft, :type => :boolean, :aliases => 'd'
   option :vim, :type => :boolean, :aliases => 'v'
+  option :chinese, :type => :boolean, :aliases => 'c'
+  option :japanese, :type => :boolean, :aliases => 'j'
   desc "new JOURNAL", "create new Journal JOURNAL"
 
   def new(*name)
-	journal = name.join('-')
-	journal = journal.gsub(/[^a-zA-Z0-9\-]/, '')  # only remain letters, number and hyphen
-    # filename = Name.filename_from_title(journal)
-    path = Post.path_of(journal)
-    Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft]) unless File.file?(path)
-	if options[:vim]
-	  Post.vim path
-	else
-	  # by default, use macvim to open the post
-      Post.edit path
+    journal = name.join('-')
+    journal = journal.gsub(/[^a-zA-Z0-9\-]/, '')  # only remain letters, number and hyphen
+      # filename = Name.filename_from_title(journal)
+      path = Post.path_of(journal, is_draft=false, is_chinese=options[:chinese], is_japanese=options[:japanese])
+      Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft], is_chinese=options[:chinese], is_japanese=options[:japanese]) unless File.file?(path)
+    if options[:vim]
+      Post.vim path
     end
-	puts "Create file #{path} successfully."
+    puts "Create file #{path} successfully."
   end
 
   desc "rename", "rename INDEX (default 1) journal to NAME (default the title of the journal)"

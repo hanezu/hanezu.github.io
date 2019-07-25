@@ -8,7 +8,7 @@ module JournalModule
 
     class << self
 
-      def init(title, has_img=false, has_latex=false, is_draft=true)
+      def init(title, has_img=false, has_latex=false, is_draft=true, is_chinese=options[:chinese], is_japanese=options[:japanese])
         buffer = []
         buffer << '---'
         buffer << 'layout: post'
@@ -35,7 +35,7 @@ module JournalModule
         buffer << '1. TOC'
         buffer << '{:toc}'
 
-        File.open(PostModule::Post.path_of(title, is_draft), 'w') do |file|
+        File.open(PostModule::Post.path_of(title, is_draft, is_chinese, is_japanese), 'w') do |file|
           file.write(buffer.join("\n"))
         end
       end
