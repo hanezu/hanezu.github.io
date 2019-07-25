@@ -22,10 +22,12 @@ class Hanezu < Thor
 
   def new(*name)
     journal = name.join('-')
-    journal = journal.gsub(/[^a-zA-Z0-9\-]/, '')  # only remain letters, number and hyphen
-      # filename = Name.filename_from_title(journal)
-      path = Post.path_of(journal, is_draft=false, is_chinese=options[:chinese], is_japanese=options[:japanese])
-      Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft], is_chinese=options[:chinese], is_japanese=options[:japanese]) unless File.file?(path)
+    unless options[:chinese] || options[:japanese]
+      journal = journal.gsub(/[^a-zA-Z0-9\-]/, '')  # only remain letters, number and hyphen
+    end
+    # filename = Name.filename_from_title(journal)
+    path = Post.path_of(journal, is_draft=false, is_chinese=options[:chinese], is_japanese=options[:japanese])
+    Journal.init(journal, has_img=options[:image], has_latex=options[:latex], is_draft=options[:draft], is_chinese=options[:chinese], is_japanese=options[:japanese]) unless File.file?(path)
     if options[:vim]
       Post.vim path
     end
