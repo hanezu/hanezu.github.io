@@ -57,7 +57,7 @@ When I send a `POST` request this time, I got a `500` error.
 This time, the request reached my server, and I saw the following error message:
 
 ```
-RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to aoba.chara.moe:39429/crypkos/undefined/save/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to my.server.host:12345/[API_ROUTE]/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
 ```
 
 # Solution: add a trailing slash to the endpoint URL
