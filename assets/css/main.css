@@ -124,8 +124,8 @@ hr {
 @media (max-width: 1366px) {
   .container {
     /* for normal screen size */
-    width: 80%;
-    /*width: 45vw;*/
+    /* width: 65%; */
+    width: 70vw;
   }
 }
 
