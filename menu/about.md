@@ -5,7 +5,9 @@ title: About
 
 ## The blog
 
-This is a blog of my thoughts on deep learning, blockchain, math, programming, chess, and else.
+This is a blog of my thoughts on deep learning, math, programming, and else.
+
+I recently started to write some non-technical posts in Chinese, too.
 
 ## About me
 
