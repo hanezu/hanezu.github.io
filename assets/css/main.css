@@ -118,14 +118,13 @@ hr {
   margin-left: auto;
   margin-right: auto;
   /* for large screen */
-  width: 1100px;
+  max-width: 680px;
 }
 
 @media (max-width: 1366px) {
   .container {
     /* for normal screen size */
     /* width: 65%; */
-    width: 70vw;
   }
 }
 
@@ -135,11 +134,6 @@ hr {
   .container {
     /* for smartphone */
     width: 90vw;
-  }
-
-  /* small trick to let chess.com pgn looks better on smartphone */
-  iframe.chess {
-    margin-left: -140px;
   }
 }
 
