@@ -1,11 +1,11 @@
-{% if post.layout == "chinese_post" %}
+{% if post.lang == "cn" %}
   {% assign words = post.content | strip_html | strip_newlines | size %}
   {% if words < 450 %}
     少于1分钟阅读
   {% else %}
     {{ words | divided_by:450 }} 分钟阅读
   {% endif %}
-{% elsif post.layout == "post" %}
+{% elsif post.lang == "en" %}
   {% assign words = post.content | strip_html | number_of_words %}
   {% if words < 250 %}
     less than 1 minute read

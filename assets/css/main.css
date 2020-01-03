@@ -225,9 +225,11 @@ hr {
 */
 
 .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   font-family: 'Quattrocento Sans', sans-serif;
-  text-align: center;
   margin-top: -3rem;
 }
 
@@ -235,8 +237,17 @@ hr {
   text-decoration: none;
 }
 
+.pagination .pagination-number {
+  padding: 10px;
+}
+
+.pagination .current{
+  background-color: #f3f3f3;
+}
+
+
 .pagination-button {
-  padding-right: 6px;
+  /* padding-right: 6px; */
   margin: 20px;
   display: inline-block;
   color: #919191;
@@ -261,8 +272,8 @@ hr {
   -moz-transition: .5s;
   -webkit-transition: .5s;
   transition: .5s;
-  width: 40px;
-  height: 40px;
+  /* width: 40px; */
+  /* height: 40px; */
   font-size: 2em !important;
 }
 

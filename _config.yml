@@ -21,21 +21,26 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Hanezu"
-description:	       "Pray for Kyoto Animation."
+description:	       "Create the worst product, and improve it."
 author:              "Hanezu"
 
 # https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
+  - 
+    scope:
+      path: ""
+    values:
+      layout: "post"
   -
     scope:
       path: "cn"
     values:
-      layout: "chinese_post"
+      lang: "cn"
   -
     scope:
       path: "posts"
     values:
-      layout: "post"
+      lang: "en"
 
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
