@@ -24,6 +24,19 @@ title:		           "Hanezu"
 description:	       "Pray for Kyoto Animation."
 author:              "Hanezu"
 
+# https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  -
+    scope:
+      path: "cn"
+    values:
+      layout: "chinese_post"
+  -
+    scope:
+      path: "posts"
+    values:
+      layout: "post"
+
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 feed:

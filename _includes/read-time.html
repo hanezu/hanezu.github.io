@@ -1,18 +1,21 @@
-{% if post.layout != post %}
-  {% assign words = post.content | strip_html | number_of_words %}
-  {% if words < 180 %}
-    less than 1 minute read
-  {% elsif words < 360 %}
-    1 minute read
+{% if post.layout == "chinese_post" %}
+  {% assign words = post.content | strip_html | strip_newlines | size %}
+  {% if words < 450 %}
+    少于1分钟阅读
   {% else %}
-    {{ words | divided_by:180 }} minute read
+    {{ words | divided_by:450 }} 分钟阅读
   {% endif %}
-{% endif %}
-
-{% if post.layout == post %}
+{% elsif post.layout == "post" %}
+  {% assign words = post.content | strip_html | number_of_words %}
+  {% if words < 250 %}
+    less than 1 minute read
+  {% else %}
+    {{ words | divided_by:250 }} minutes read
+  {% endif %}
+{% else %}
   {% assign words = content | number_of_words %}
   {% if words < 180 %}
-    less than 1 minute read
+    less than 1 minute read!!
   {% elsif words < 360 %}
     1 minute read
   {% else %}
