@@ -16,7 +16,7 @@ title: Home
   <p>
     <!-- not just a newline character -->
     {% if post.excerpt.size > 1 %}
-      {{ post.excerpt }}
+      {{ post.excerpt | strip_html }}
     {% else %}
       {% if post.lang == "cn" %}
         {{ post.content | strip_html | truncate: 180 }}

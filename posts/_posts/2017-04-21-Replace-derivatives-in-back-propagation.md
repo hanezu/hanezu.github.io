@@ -3,15 +3,8 @@ layout: post
 title: "Replace derivatives in back propagation"
 tags: [DL, Math]
 image: Replace-derivatives-in-back-propagation/dYdX_and_dYdW.jpg
+excerpt_separator: "<!--more-->"
 ---
-
-<script type="text/javascript" async
- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-
 
 When I tried to calculate the derivative of ReLU, i.e.
 
@@ -19,6 +12,8 @@ $Y = max(0, X)$
 
 where Y, X are (N, H) dimension matrix, I was astounded. 
 Isn't it a 4-dimension array of shape (N, H, N, H)? 
+
+<!--more-->
 
 Actually it is. But according to [this document by Erik Learned-Miller, ](http://cs231n.stanford.edu/vecDerivs.pdf)
 
@@ -131,3 +126,10 @@ $$
 and $f_\frac{\mathrm{d}Y}{\mathrm{d}X}$ should be as simple and quick to calculate as possible.
 
 
+
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>

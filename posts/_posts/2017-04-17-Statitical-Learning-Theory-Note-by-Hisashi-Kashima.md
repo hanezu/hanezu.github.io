@@ -4,13 +4,6 @@ title: "Statitical Learning Theory Note by Hisashi Kashima"
 tags: [DL]
 ---
 
-<script type="text/javascript" async
- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-
 The course was taught in Spring 2017.
 The course material is [here.](http://www.geocities.jp/kashi_pong/course_statistical_learning_theory_2017.html)
 
@@ -57,3 +50,11 @@ L(w) = ||y-Xw||_2 + \lambda||w||_2
 $$
 
 The latter one is simply the weight decaying factor in machine learning.
+
+
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>

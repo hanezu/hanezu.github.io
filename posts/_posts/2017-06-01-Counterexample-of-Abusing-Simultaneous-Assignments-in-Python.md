@@ -4,13 +4,6 @@ title: "Counterexample of Abusing Simultaneous Assignments in Python"
 tags: [Programming]
 ---
 
-<script type="text/javascript" async
- src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-
 When learning python,
 I was amazed by `a, b = b, a`
 and thought, 
@@ -184,3 +177,10 @@ caching the right, and assign to left, one by one". If the logic
 is clear, then go fo the simpler code.
 
 
+
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
