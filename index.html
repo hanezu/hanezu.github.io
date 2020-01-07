@@ -14,10 +14,15 @@ title: Home
   </div>
   {% endif %}
   <p>
-    {% if post.lang == "cn" %}
-      {{ post.content | strip_html | truncate: 180 }}
-    {% elsif post.lang == "en" %}
-      {{ post.content | strip_html | truncate: 350 }}
+    <!-- not just a newline character -->
+    {% if post.excerpt.size > 1 %}
+      {{ post.excerpt }}
+    {% else %}
+      {% if post.lang == "cn" %}
+        {{ post.content | strip_html | truncate: 180 }}
+      {% elsif post.lang == "en" %}
+        {{ post.content | strip_html | truncate: 350 }}
+      {% endif %}
     {% endif %}
     <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
     <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>

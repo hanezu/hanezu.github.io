@@ -3,4 +3,4 @@ title: 随记
 ---
 
 {% assign posts = site.categories.journal %}
-{% include post_list_item.html %}
+{% include post_list.html %}
