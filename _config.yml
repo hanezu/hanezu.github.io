@@ -31,9 +31,19 @@ defaults:
       path: ""
     values:
       layout: "post"
+  - 
+    scope:
+      path: "menu"
+    values:
+      layout: "page"
   -
     scope:
       path: "cn"
+    values:
+      lang: "cn"
+  -
+    scope:
+      path: "journal"
     values:
       lang: "cn"
   -

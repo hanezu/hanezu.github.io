@@ -14,6 +14,25 @@
 */
 
 /*
+Custom CSS by Hanezu 
+ */
+
+/* display image caption */
+img + em {
+  display: block;
+  text-align: center;
+}
+
+/* round avatar */
+.avatar {
+  vertical-align: bottom;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/*
   Base
 */
 
@@ -569,26 +588,4 @@ th, td {
 
 .fa-rss-square:hover {
   color: #ff6600;
-}
-
-/*
-Custom CSS by Hanezu below
- */
-
-/*
-display image caption
- */
-img + em {
-  display: block;
-  text-align: center;
-}
-
-/*
-round avatar
-*/
-.avatar {
-  vertical-align: middle;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
 }
