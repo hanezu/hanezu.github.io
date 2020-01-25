@@ -17,7 +17,7 @@ class Hanezu < Thor
   option :draft, :type => :boolean, :aliases => 'd'
   option :vim, :type => :boolean, :aliases => 'v'
   option :chinese, :type => :boolean, :aliases => 'c'
-  option :japanese, :type => :boolean, :aliases => 'j'
+  option :journal, :type => :boolean, :aliases => 'j'
   desc "new JOURNAL", "create new Journal JOURNAL"
 
   def new(*name)
