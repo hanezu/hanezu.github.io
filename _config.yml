@@ -43,11 +43,6 @@ defaults:
       lang: "cn"
   -
     scope:
-      path: "journal"
-    values:
-      lang: "cn"
-  -
-    scope:
       path: "posts"
     values:
       lang: "en"

@@ -14,7 +14,6 @@ menu:
 - {name: 'Writing', path: 'menu', url: 'writing.html'}
 # - {name: 'ブログ', path: 'menu', url: 'ja.html'}
 - {name: '博客', path: 'menu', url: 'cn.html'}
-- {name: '随记', path: 'menu', url: 'journal.html'}
 - {name: 'About', path: 'menu', url: 'about.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
 
