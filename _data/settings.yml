@@ -1,5 +1,5 @@
 title:  Hanezu
-tagline: A blog of Hanezu's thoughts, both technical and non-technical.
+tagline: Random thoughts and records that make up @hanezu.
 
 # Authors documented under _data
 
@@ -11,11 +11,9 @@ disqus:
 google-ID: 'UA-109662927-1'
 
 menu:
-- {name: 'Writing', path: 'menu', url: 'writing.html'}
-# - {name: 'ブログ', path: 'menu', url: 'ja.html'}
-- {name: '博客', path: 'menu', url: 'cn.html'}
-- {name: 'About', path: 'menu', url: 'about.html'}
-- {name: 'Contact', path: 'menu', url: 'contact.html'}
+- {name: 'Blog', path: 'blog', url: ''}
+- {name: 'Tech', path: 'blog', url: 'tech.html'}
+- {name: '随记', path: 'blog', url: 'cn.html'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:

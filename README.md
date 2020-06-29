@@ -1,13 +1,10 @@
 # [Hanezu's blog](https://hanezu.net/)
 
-I used Jekyll to build my blog.
-I used a theme called [Lagrange](https://lenpaul.github.io/Lagrange/) developed by Paul Le, and did some adjustment.
+[Jekyll](https://jekyllrb.com/) + [Lagrange](https://lenpaul.github.io/Lagrange/)
 
-## Some hacks for blogging
+## LaTeX support
 
-### LaTeX support
-
-Insert the following snippet at the bottom of a markdown post, and we are ready to type Math equations.
+Inserted the following snippet at the bottom of a markdown post to support LaTeX equations.
 
 ```html
 <script type="text/javascript" async
@@ -18,8 +15,8 @@ Insert the following snippet at the bottom of a markdown post, and we are ready 
 </script>
 ```
 
-### Custom excerpt
+## Custom excerpt
 
-We can custimize the content of excerpt by adding
-`excerpt_separator: "<!--more-->"` to [front matter](https://jekyllrb.com/docs/front-matter/),
-and add `<!--more-->` to wherever we want to end the excerpt.
+custimize the excerpt of a post by adding `excerpt_separator: "<!--more-->"`
+to the [front matter](https://jekyllrb.com/docs/front-matter/), and add
+`<!--more-->` to wherever we want to end the excerpt.

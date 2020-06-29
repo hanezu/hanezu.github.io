@@ -1,60 +1,52 @@
 ---
-layout: default
 title: Home
 ---
 
-{% for post in paginator.posts %}
-<div class="posts">
-  <h1 class="homepage-title">
-    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-  </h1>
-  {% if post.image %}
-  <div class="thumbnail-container">
-    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+{% include head.html %}
+
+
+<body>
+
+  <div class="container">
+    <header class="masthead">
+      {% include header.html %}
+      {% include menu.html %}
+    </header>
+
+    <h1>Hi, I am Huachun.</h1>
+
+    This is a <a href="{{ site.github.url }}/blog">blog</a> of my thoughts on <a
+      href="{{ site.github.url }}/blog/tech.html">deep learning, math, programming</a>, and else.
+
+    <br />
+
+    I recently started to write some <a href="{{ site.github.url }}/blog/tech.html">non-technical posts in Chinese</a>
+    too.
+
+    <h1>Some facts about Huachun</h1>
+
+    <ul>
+      <li>
+        Developing <a href="https://crypko.ai"></a>Crypko @ <a href="https://www.preferred-networks.jp/"></a>PFN, 2018 -
+        now.
+      </li>
+      <li>
+        Bachelor of Math @ Fudan University, 2014 - 2018.
+      </li>
+      <li>
+        His violin, made by Mathias Neüner in <a href="https://en.wikipedia.org/wiki/Mittenwald">Mittenwald, Germany</a>, is 139 years older than him.
+      </li>
+      <li>
+        He plays <a href="https://en.wikipedia.org/wiki/Sicilian_Defence,_Accelerated_Dragon">Accelerated Dragon variation</a> as Black.
+      </li>
+    </ul>
+
+    <h1>Contact</h1>
+    If you enjoy reading my posts, feel free to comment (in English, Japanese or Chinese) or <a
+      href="mailto:huachun@crypko.ai">email me</a>.
+
+    {% include footer.html %}
+
   </div>
-  {% endif %}
-  <p>
-    <!-- not just a newline character -->
-    {% if post.excerpt.size > 1 %}
-      {{ post.excerpt | strip_html }}
-    {% else %}
-      {% if post.lang == "cn" %}
-        {{ post.content | strip_html | truncate: 180 }}
-      {% elsif post.lang == "en" %}
-        {{ post.content | strip_html | truncate: 350 }}
-      {% endif %}
-    {% endif %}
-    <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-  </p>
-</div>
-{% endfor %}
 
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.previous_page_path }}">
-    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-  </a>
-  <a class="pagination-number" href="{{ site.github.url }}{{ paginator.previous_page_path }}">{{paginator.previous_page}}</a>
-  {% else %}
-  <a class="pagination-button">
-    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-  </a>
-  {% endif %}
-
-  <a class="pagination-number current" href="{{ site.github.url }}{{ paginator.page_path }}">{{paginator.page}}</a>
-  
-  {% if paginator.next_page %}
-  <a class="pagination-number" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{paginator.next_page}}</a>
-  <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">
-    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-  </a>
-  {% else %}
-  <a class="pagination-button">
-    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-  </a>
-  {% endif %}
-</div>
-{% endif %}
+</body>

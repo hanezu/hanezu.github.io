@@ -171,14 +171,18 @@ hr {
   color: black;
 }
 
-.masthead-title a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #505050;
+.masthead-title {
+  margin-bottom: 0;
 }
 
 .masthead-subtitle {
   color: #999;
+}
+
+.masthead a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #505050;
 }
 
 /*
@@ -322,6 +326,7 @@ hr {
 
 .menu {
   padding-top: 0.5rem;
+  margin-top: 0; /* Stick with header */
   display: block;
 }
 

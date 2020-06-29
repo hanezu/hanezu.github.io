@@ -6,7 +6,10 @@
 <body>
 
   <div class="container">
-    {% include header.html %}
+    <header class="masthead">
+      {% include header.html %}
+      {% include menu.html %}
+    </header>
 
     <div class="post-container">
       {{ content }}
@@ -17,4 +20,5 @@
   </div>
 
 </body>
+
 </html>

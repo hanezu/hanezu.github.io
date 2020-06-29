@@ -1,5 +1,5 @@
 ---
-title: Writing
+title: Tech
 ---
 
 {% assign posts = site.categories.posts %}

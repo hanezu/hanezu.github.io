@@ -12,6 +12,8 @@
 
 # jekyll-paginate configuration
 paginate:            5
+paginate_path:       "/blog/page:num/"
+
 
 # Build settings
 markdown:            kramdown
@@ -28,12 +30,7 @@ author:              "Hanezu"
 defaults:
   - 
     scope:
-      path: ""
-    values:
-      layout: "post"
-  - 
-    scope:
-      path: "menu"
+      path: "blog"
     values:
       layout: "page"
   -
@@ -41,11 +38,13 @@ defaults:
       path: "cn"
     values:
       lang: "cn"
+      layout: "post"
   -
     scope:
       path: "posts"
     values:
       lang: "en"
+      layout: "post"
 
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines

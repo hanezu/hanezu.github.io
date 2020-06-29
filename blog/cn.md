@@ -1,5 +1,5 @@
 ---
-title: 中文博客
+title: 随记
 ---
 
 {% assign posts = site.categories.cn %}
