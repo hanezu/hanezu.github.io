@@ -23,7 +23,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Hanezu"
-description:	       "Create the worst product, and improve it."
+description:	       "Don't worry. Think, and do."
 author:              "Hanezu"
 
 # https://jekyllrb.com/docs/configuration/front-matter-defaults/
