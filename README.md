@@ -2,6 +2,15 @@
 
 [Jekyll](https://jekyllrb.com/) + [Lagrange](https://lenpaul.github.io/Lagrange/)
 
+## Setup
+
+### Install jekyll
+
+`brew install` as in the [documentation](https://jekyllrb.com/docs/installation/macos/).
+then `jekyll serve`.
+
+I also needed to `bundle install` and use `bundle exec jekyll serve` on High Sierra
+
 ## LaTeX support
 
 Inserted the following snippet at the bottom of a markdown post to support LaTeX equations.
