@@ -1,6 +1,6 @@
 ---
 title: "幸福に生きろ——关于《素晴らしき日々》、《終ノ空remake》与一些胡思乱想"
-tags: [Life]
+tags: [Anime, Life]
 ---
 
 注意: 这是一篇玩通了《素晴らしき日々 〜不連続存在〜》、《終ノ空remake》与读完 Martin Crimp 的《[Cyrano de Bergerac: in a free adaptation](https://www.amazon.co.jp/gp/product/B081DB1Q98/ref=ppx_yo_dt_b_d_asin_title_o02?ie=UTF8&psc=1)》后的一些感想，虽算不上考察，但含有大量剧透。另外由于本人完全没有参考其他的考察文，唯一参考了的是10周年附赠小册子中SCA自的访谈，部分理解可能存在对作者原意的误解，请见谅。
