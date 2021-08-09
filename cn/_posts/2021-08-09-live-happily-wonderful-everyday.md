@@ -21,10 +21,15 @@ tags: [Life]
 
 <pre>
 ロクサーヌに恋した、クリスチャン、そしてシラノは二人で一人を演じる事によりロクサーヌの心を奪う事が出来る。
+
 だけど、それはあくまでもロクサーヌが外見を受け持ったクリスチャンに恋するという事……
+
 当たり前といえば当たり前……知性は形が無くとも、外見は形を持つ。
+
 <b>人は形無きものではなく、形あるものに恋する。</b>
+
 ロクサーヌはシラノの形無き知性を恋する事は出来ない。
+
 クリスチャンという外見を以てして、はじめてシラノの知性、彼の内面に恋する事が出来るのだ……
 </pre>
 
@@ -33,8 +38,11 @@ tags: [Life]
 
 <pre>
 <b>Roxane</b> You’re telling me you loved me but you SIGNED HIS NAME – HIS NAME, Cyrano – how many times? – a hundred? – more? – what was going on in your mind? –
+
 <b>Cyrano</b> I couldn’t … [admit I loved you]
+
 ……
+
 <b>Roxane</b> – so you did – you meant well. But to be double is cruel … (For herself.) Have I loved two men? – or no men at all?
 </pre>
 
@@ -45,10 +53,13 @@ tags: [Life]
 <pre>
 【ざくろ】
 「あなたが幻想世界と呼んだ、この世界での生活は、私にとっては至極の記憶です」
+
 【ざくろ】
 「この夢の世界こそ、私の人生で一番の思い出となりました……」
+
 【ざくろ】
 「書き割りの様なチープで……出来損ないの夢の世界……それでも、そこであなたと過ごせた時間は、間違いなく……」
+
 「<b>素晴らしき日々</b>でした」
 </pre>
 
@@ -135,7 +146,7 @@ tags: [Life]
 
 夜晚的向日葵是我在游戏中最喜欢的意象，特别是同名 bgm 的钢琴曲尤其好听。
 
-在白天，向日葵面向太阳，到了夜晚，月亮反射的太阳光洒在向日葵上，给向日葵带来浓浓的阴森色彩。从彼世来到现世，并和皆守相恋的由岐，像是这夜晚的向日葵，阳光活力，却又笼罩着本质性的悲伤。皆守正是走在这向日葵相伴的夜路上，翻越了那仿佛无法跨越的坡道。
+在白天，向日葵面向太阳，到了夜晚，月亮反射的太阳光洒在向日葵上，给向日葵带来浓浓的阴森色彩。从彼世来到现世，并和皆守相恋的由岐，像是这夜晚的向日葵，阳光活力，却又笼罩着本质性的悲伤。正是行走在这向日葵相伴的夜路上，皆守才翻越了那个令人绝望的坡道。
 
 <!-- 我想，如果月亮之旅可以比喻为去往彼世（或者按照《素晴日》的话来说，是由岐所言的幻想世界）之旅的话，那么夜晚的向日葵则是彼世来到现世，并爱上皆守的由岐。 --> 
 
@@ -318,7 +329,7 @@ tags: [Life]
 
 ## 《終ノ空remake》——一成不变的美好日常背后模糊的恐惧
 
-《終ノ空remake》的一个主题，就是人们在物质富饶的这个时代，对一成不变的美好日常有着一种模糊的恐惧。在集体自杀事件之后，琴美说:
+《終ノ空remake》的一个主题，就是人们在物质富饶的这个时代，对一成不变的美好日常有着一种模糊的恐惧。在集体自杀事件之后，琴美说，
 
 ```
 琴美 : 「日常はまるで頑強な岩盤みたいなもので、決して崩れない大地である様に見えるけどけどさ一一決してそんな事はないんだよ」
@@ -460,7 +471,7 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 
 这是《終ノ空remake》给我带来很大人生启发的一个地方。2021年时代快进到了新冠肺炎，中美关系紧张，人们终于脱离了“过于和平的日常”，才发现生活除了变糟了以外没有什么变化。人们没能想到原本和平的生活缺少了什么，反而只是发现新的生活缺少了一些以前的美好。想家不能回，想留学留不成，想出国旅游却哪都去不了，想自由行动却要隔离。
 
-就像维特根斯坦所言“世界的意义在世界之外”，我们可能的确无法从这个世界找寻到活着的意义，而这并不由“一成不变的日常”背锅。即使世界发生了变动，活着的意义也不会自己出来。新冠也好，中美关系也好，都是发生在世界的偶然，必然是无价值的。从无价值的事情中，我们无从找寻活着的意义，也就无所谓赢家输家了。
+就像早期的维特根斯坦所言“世界的意义在世界之外”，我们可能的确无法从这个世界找寻到活着的意义，而这并不由“一成不变的日常”背锅。即使世界发生了变动，活着的意义也不会自己出来。新冠也好，中美关系也好，都是发生在世界的偶然，必然是无价值的。从无价值的事情中，我们无从找寻活着的意义，也就无所谓赢家输家了。
 
 在此之上，我想我们能做的，是像行人一样活着并观察这个充满谎言的世界，是像希実香一样竭尽全力去守护来之不易又平淡无奇的「素晴らしき日々」，是像皆守一样直面现实之后仍然选择去“幸福地活着”。
 
@@ -472,7 +483,12 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 
 > If one asks why one should live happily, that seems like a tautological question: “the happy life seems to be justified of itself, it seems that it is the only right life”
 
+```
 注: 关于 tautology, Ray Monk 的《How To Read Wittgenstein》中提到，维特根斯坦认为“Logic is not a science that discovers truths; it is just a collection of tautologies. And a tautology is not a picture of reality.” 人们苦苦追寻的“人生至理”并不是真理，就像这里 “人啊，给我幸福地活着！” 并不是什么维特根斯坦认为的人生至理，而仅仅是一个恒真句，是同义反复罢了。
+```
+
+正文到此结束。
+
 
 <!--
 
@@ -530,7 +546,6 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 
 -->
 
-正文到此结束。
 
 ------
 
@@ -541,17 +556,13 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 ### 支撑温柔的，是隐忍的固执
 
 ```
-
 【木村】
-
 「強さは優しさだなあ……と思うし、それはやせ我慢なんだなあ、って実感したんだ」
 
 【羽咲】
-
 「優しさが、やせ我慢?」
 
 【木村】
-
 「あはは……強さが優しさって言葉は陳腐だけどさ、さすがに優しさがやせ我慢だって言葉は聞いた事ないよね。
 優しさってさ、一過性……たとえば瞬間に見せるものなんて優しさでも何でもないんだよ。それは同情って言うんだよ。
 そう。一過性の優しさなんて、辛さも苦しさも……あとリスクだって無い
@@ -572,7 +583,7 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 这让我想到心理学中同情，共情与 Compassion 的区别（具体参考 [Empathy, Sympathy, and Compassion – What's the Difference?](https://compassionit.com/2017/08/27/empathy-sympathy-and-compassion-whats-the-difference/)）。这里木村所言的「優しさ」，很大程度上应该就是 Compassion ，这是因为同情与共情均为一时的过程（「一過性の優しさなんて、辛さも苦しさも……あとリスクだって無い」），而 Compassion 则是在同情或共情的基础上，愿意为了消解对方的痛苦而行动（「自分の痛みを天秤にかけても……それでも相手のために突き通す……それこそが優しさだよ……」），也就意味着不是一时去理解或是感同身受对方的痛苦，而是确确实实分摊风险，并在减轻对方痛苦的同时接受可能带来的痛苦。支撑这种温柔，需要的是隐忍的固执。只有固执的意志才能让人主动去分摊他人的痛苦，而当痛苦真的来临的时候，内心强大的人只是隐忍不言罢了。
 
 
-### ### 希実香与やす子的两种爱
+### 希実香与やす子的两种爱
 
 我很喜欢在两部作品中塑造得有血有肉的两个角色: 希実香与やす子。
 
@@ -594,13 +605,13 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 
 --> 
 
-希実香与ざくろ决定一同反抗校园霸凌时，希実香动用自己化学知识的力量，而ざくろ则背诵了《Cyrano de Bergerac》。当希実香质疑ざくろ这哪能用来反抗霸凌者时，ざくろ说
+希実香与ざくろ决定一同反抗校园霸凌时，希実香动用自己化学知识的力量，而ざくろ则背诵了《Cyrano de Bergerac》。当希実香质疑ざくろ这哪能用来反抗霸凌者时，ざくろ说，
 
 > 「文学は勝つための学問じゃなくて、負けないための学問だよ……だから、私は戦えるんだよ……」
 
 ざくろ这句话让我联想到 Wittgenstein 对于艺术的执着。这从他后期的哲学中具有基础性作用的 “perspicuous representation” （指的是让 ‘understanding which consists in “seeing connections”’ 成为可能的一种表现）可以看出端倪。
 
-> What it appeals to is something that is at once more common and, in our increasingly scientistic society, less well understood, namely the kind of understanding we have of, and can be given to us by, a piece of music, a poem or a work of art.
+> What **it** appeals to is something that is at once more common and, in our increasingly scientistic society, less well understood, namely the kind of understanding we have of, and can be given to us by, a piece of music, a poem or a work of art.
 
 这句话的 it 指代的是 “the kind of understanding that is produced by a theory or an explanation” 与 “the kind of understanding after which philosophers ought to seek” 的对比。Wittgenstein 认为前者是科学研究带来的成果，而后者只有艺术才能带来这样的理解。在他看来，逐渐走向科学为尊的时代令人痛心疾首。
 
@@ -667,7 +678,7 @@ Monk, Ray. How To Read Wittgenstein . Granta Publications. Kindle Edition.
 「そ、それは困るよ。私は」
 ```
 
-David Brooks 在 [Three Views of Marriage](https://www.nytimes.com/2016/02/23/opinion/three-views-of-marriage.html) 中提到了3种用于决定是否进入一段婚姻的视角: psychological, romantic and [moral lens](https://mp.weixin.qq.com/s/HkwwXP86NgPA2ByZ_GJhEw#:~:text=%E7%9A%84%E7%A7%8D%E7%A7%8D%E7%A3%A8%E8%80%97%E3%80%82-,3.%20%E9%81%93%E5%BE%B7%E8%A7%86%E8%A7%92%EF%BC%88moral%20lens%EF%BC%89,-%EF%BC%9A%E6%80%A7%E6%A0%BC%E5%86%B3%E5%AE%9A%E4%BA%86)。他说，
+David Brooks 在 [Three Views of Marriage](https://www.nytimes.com/2016/02/23/opinion/three-views-of-marriage.html) 中提到了 3 种用于决定是否进入一段婚姻的视角: psychological, romantic and [moral lens](https://mp.weixin.qq.com/s/HkwwXP86NgPA2ByZ_GJhEw#:~:text=%E7%9A%84%E7%A7%8D%E7%A7%8D%E7%A3%A8%E8%80%97%E3%80%82-,3.%20%E9%81%93%E5%BE%B7%E8%A7%86%E8%A7%92%EF%BC%88moral%20lens%EF%BC%89,-%EF%BC%9A%E6%80%A7%E6%A0%BC%E5%86%B3%E5%AE%9A%E4%BA%86)。他说，
 
 > The everyday tasks of marriage are opportunities to cultivate a more selfless love. **Everyday there’s a chance to inspire and encourage your partner to become his or her best self.** In [moral] lens, marriage isn’t about two individuals trying to satisfy their own needs; it’s a partnership of mutual self-giving for the purpose of moral growth and to make their corner of the world a little better.
 
@@ -699,15 +710,13 @@ David Brooks 在 [Three Views of Marriage](https://www.nytimes.com/2016/02/23/op
 
 ### 遍在转生
 
-> 彩名 : 「私は音無彩名。北校の三年生」
-
+```
+彩名 : 「私は音無彩名。北校の三年生」
 彩名 : 「全宇宙を分かち支えたる無始者の形を取る唯一なる魂」
-
 彩名 : 「すべてを知り、そして、
-
 すべてを知らない。
-
 ーであり、全である。少女」
+```
 
 作为一个从不对考察感冒的玩家，在玩完《素晴日》的「終ノ空 II 」章意外地被戳中了点（并一发不可收拾）。「終ノ空 II 」章为《素晴日》的设定提供了一个（SCA自官方推荐的？）解释——遍在转生观。
 
