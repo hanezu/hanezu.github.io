@@ -88,7 +88,7 @@ tags: [Life]
 
 > 人間の楽しみというのは、結局は自己満足なのだ。自分が満足できる状況へ自分を導くことが、つまり人生の目的であり、すなわち「成功」というものである。そのためには、お金は頼もしい道具だといえる。これを利用しない手はない。
 
-只是在埋头挣钱之前，我们要意识到人的大脑并没有进化到强度或者持续时间来衡量一件事物带来的快乐。耶鲁大学的 Laurie Santos 在 [The Science of Well-Being by](https://www.coursera.org/learn/the-science-of-well-being) 课程中提到
+只是在埋头挣钱之前，我们要意识到人的大脑并没有进化到强度或者持续时间来衡量一件事物带来的快乐。Laurie Santos 在 [The Science of Well-Being](https://www.coursera.org/learn/the-science-of-well-being) 课程中提到
 
 > …… for most experiences where you're having positive effect, it's just that it's above baseline. There is a change from your normal daily life here, and it doesn't have to be a big change. And so, this is kind of the crazy thing about positive and negatives, and one of the things that comes from not recognizing absolutes is that, what our mind notices is change, like our mind notices there's change from time one to time two. It doesn't often notice the duration of that change, like how long your experience is, and it also often doesn't notice as much as we think the magnitude of that change. It's just like, "Oh, this is better than before." And so, **the key is you don't actually need it to be that much better for it to count for your mind, it's kind of like a ceiling effect when it's just better, minds notice that.**
 
