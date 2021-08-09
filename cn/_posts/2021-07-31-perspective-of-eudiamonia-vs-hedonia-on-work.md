@@ -1,6 +1,6 @@
 ---
 title: "从 Eudiamonic vs. Hedonic Happiness 的角度看待工作"
-tags: [Life]
+tags: [Work]
 ---
 
 最近工作的新状态是，比起接受新的挑战，更多地忍不住选择躺平。比起加班奋斗，更多地去找时间弹琴，读书，做自己喜欢做的事情。
@@ -37,11 +37,11 @@ tags: [Life]
 
 比如虽然弹琴和工作对我而言都可以看做是 eudaimonic 活动，但是弹琴消耗的是体力与右脑思维能力，工作则不仅消耗体力，左脑思维能力，更多的是与人沟通交流消耗社交力，专心干活消耗集中力，遇挫折不气馁消耗恢复力，马拉松式的项目消耗毅力，这些心理资源都需要时间与充分休息才能得到回复。从带来的意义与价值感上说，演奏曲目本身就能让人进入 [flow state](https://en.wikipedia.org/wiki/Flow_(psychology))。除此之外，习得一首曲目带来的音乐享受、理解与掌控感，表演一首曲目则带来成就感，认同感和自我效能。另一方面，工作首要目的是带来金钱，在此之上才是带来成就感，认同感与自我效能（根据 [Hedonic treadmill](https://en.wikipedia.org/wiki/Hedonic_treadmill) 效应，金钱本身带来的 well-being 是短暂的，应该与工作内容本身带来的 well-being 进行区分对待）。
 
-那么回到我们的重点: 工作。首先，工作是否为 eudaimonic 活动，应该与工作的性质以及工作的人如何看待这份工作有关。不难举例有的人的工作不带来任何快乐，更别提 eudaimonic happiness 了，而有的人工作即使不给钱他也照样愿意做。更一般地，比如对于受过高等教育的年轻人，虽然一般还是把工资摆在优先度高的位置，他们还是比较青睐能够带来意义感，追求实现自己的潜能，收获 eudaimonic happiness 的工作。换句话说，对于一个人来说，不同的工作能带来不同程度的 eudaimonic happiness。不同工作获得  eudaimonic happiness 的差异，可以解释为什么同样是为了实现自己的潜能，有的人全身心投入工作，有的人则朝九晚五下班回来找事做。这是因为当本职对 eudaimonic happiness 贡献较少时，工作之余的爱好往往会更高效地带来实现潜能的满足感与价值感。
+那么回到本文的考察对象: 工作。首先，工作是否为 eudaimonic 活动，应该与工作的性质以及工作的人如何看待这份工作有关。不难举例有的人的工作不带来任何快乐，更别提 eudaimonic happiness 了，而有的人工作即使不给钱他也照样愿意做。更一般地，比如对于受过高等教育的年轻人，虽然一般还是把工资摆在优先度高的位置，他们还是比较青睐能够带来意义感，追求实现自己的潜能，收获 eudaimonic happiness 的工作。换句话说，对于一个人来说，不同的工作能带来不同程度的 eudaimonic happiness。不同工作获得  eudaimonic happiness 的差异，可以解释为什么同样是为了实现自己的潜能，有的人全身心投入工作，有的人则朝九晚五下班回来找事做。这是因为当本职对 eudaimonic happiness 贡献较少时，工作之余的爱好往往会更高效地带来实现潜能的满足感与价值感。
 
 其次，既然工作往往可以看做为一种 eudaimonic 活动，我们在和其他 eudaimonic 活动进行比较时，就有必要将金钱分开来进行讨论。我想如果是[森博嗣](TBD)的话他会说，工作往往是用“经历讨厌的事情”来换取金钱，而我们只需要挣自己需要的份，其他时间不是用于工作挣钱，而是投资时间和金钱到自己喜欢做的事情。我想，考虑到工作本身能带来 eudaimonic happiness，我们不一定需要将两者完全对立起来，而是努力寻找一个合适的折中点，既不把工作当成生活唯一的意义，也不为了追求自我而陷入经济困难或中年危机。
 
-同时，我猜测， eudaimonic happiness 应该也是分不同种类的。比方说有的活动（如工作）更多通过职场、社会的认可带来价值感，有的活动（如读书学习）则是满足了解世界的好奇心，还有的活动（如练习一个乐器）则是作为一种创造性活动，更多的是实现自己的艺术想法，感受隐藏在内心的美。要是参考Maslow的[需求层次理论](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs)的话，上述例子分别满足的是Esteem needs，Cognitive needs 以及 Self-actualization。我想，一个走向 well-being 的方向，就是去参加多样的 eudaimonic 活动来均衡地满足自己的需求。（题外话，在查阅 Maslow 理论时我想了解学术界现在对这个理论的认可度，发现目前心理学界似乎认为[没有完全过时](https://www.verywellmind.com/updating-maslows-hierarchy-of-needs-2795269)，只是 hierarchy 的连续性和 individualistic 和 collectivistic 社会下的差异需要进行探究）
+同时，我猜测， eudaimonic happiness 应该也是分不同种类的。比方说有的活动（如工作）更多通过职场、社会的认可带来价值感，有的活动（如读书学习）则是满足了解世界的好奇心，还有的活动（如练习一个乐器）则是作为一种创造性活动，更多的是实现自己的艺术想法，感受隐藏在内心的美。要是参考 Maslow 的[需求层次理论](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs)的话，上述例子分别满足的是 Esteem needs，Cognitive needs 以及 Self-actualization。我想，一个走向 well-being 的方向，就是去参加多样的 eudaimonic 活动来均衡地满足自己的需求。（题外话，在查阅 Maslow 理论时我想了解学术界现在对这个理论的认可度，发现目前心理学界似乎认为[没有完全过时](https://www.verywellmind.com/updating-maslows-hierarchy-of-needs-2795269)，只是 hierarchy 的连续性和 individualistic 和 collectivistic 社会下的差异需要进行探究）
 
 最后，eudaimonic 活动往往意味着一定程度的付出，而不同的活动需要的心理/物理资源也是不同的。这意味着我们对自己拥有的资源进行合理的分配，可以让我们更有效率地进行 eudaimonic 活动，避免出现内心资源消耗殆尽后只能靠无限刷手机和暴饮暴食之类的 hedonic 活动来恢复的情况。另一方面，付出与活在当下有着比较强的相关性，我想可能的原因是 eudaimonic 活动从性质上需要我们将注意力移到手上在做的事情，也可能是因为我们更愿意为我们付出的事物投入更多的注意力。
 

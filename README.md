@@ -29,3 +29,12 @@ Inserted the following snippet at the bottom of a markdown post to support LaTeX
 custimize the excerpt of a post by adding `excerpt_separator: "<!--more-->"`
 to the [front matter](https://jekyllrb.com/docs/front-matter/), and add
 `<!--more-->` to wherever we want to end the excerpt.
+
+
+## Tags 
+
+### Chinese blogs
+
+```
+['Work', 'Life', 'Anime']
+```
