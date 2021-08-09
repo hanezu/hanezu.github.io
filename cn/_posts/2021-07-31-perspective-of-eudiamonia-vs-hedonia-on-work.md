@@ -39,7 +39,7 @@ tags: [Work]
 
 那么回到本文的考察对象: 工作。首先，工作是否为 eudaimonic 活动，应该与工作的性质以及工作的人如何看待这份工作有关。不难举例有的人的工作不带来任何快乐，更别提 eudaimonic happiness 了，而有的人工作即使不给钱他也照样愿意做。更一般地，比如对于受过高等教育的年轻人，虽然一般还是把工资摆在优先度高的位置，他们还是比较青睐能够带来意义感，追求实现自己的潜能，收获 eudaimonic happiness 的工作。换句话说，对于一个人来说，不同的工作能带来不同程度的 eudaimonic happiness。不同工作获得  eudaimonic happiness 的差异，可以解释为什么同样是为了实现自己的潜能，有的人全身心投入工作，有的人则朝九晚五下班回来找事做。这是因为当本职对 eudaimonic happiness 贡献较少时，工作之余的爱好往往会更高效地带来实现潜能的满足感与价值感。
 
-其次，既然工作往往可以看做为一种 eudaimonic 活动，我们在和其他 eudaimonic 活动进行比较时，就有必要将金钱分开来进行讨论。我想如果是[森博嗣](TBD)的话他会说，工作往往是用“经历讨厌的事情”来换取金钱，而我们只需要挣自己需要的份，其他时间不是用于工作挣钱，而是投资时间和金钱到自己喜欢做的事情。我想，考虑到工作本身能带来 eudaimonic happiness，我们不一定需要将两者完全对立起来，而是努力寻找一个合适的折中点，既不把工作当成生活唯一的意义，也不为了追求自我而陷入经济困难或中年危机。
+其次，既然工作往往可以看做为一种 eudaimonic 活动，我们在和其他 eudaimonic 活动进行比较时，就有必要将金钱分开来进行讨论。我想如果是[森博嗣](how-to-decrease-your-money.html)的话他会说，工作往往是用“经历讨厌的事情”来换取金钱，而我们只需要挣自己需要的份，其他时间不是用于工作挣钱，而是投资时间和金钱到自己喜欢做的事情。我想，考虑到工作本身能带来 eudaimonic happiness，我们不一定需要将两者完全对立起来，而是努力寻找一个合适的折中点，既不把工作当成生活唯一的意义，也不为了追求自我而陷入经济困难或中年危机。
 
 同时，我猜测， eudaimonic happiness 应该也是分不同种类的。比方说有的活动（如工作）更多通过职场、社会的认可带来价值感，有的活动（如读书学习）则是满足了解世界的好奇心，还有的活动（如练习一个乐器）则是作为一种创造性活动，更多的是实现自己的艺术想法，感受隐藏在内心的美。要是参考 Maslow 的[需求层次理论](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs)的话，上述例子分别满足的是 Esteem needs，Cognitive needs 以及 Self-actualization。我想，一个走向 well-being 的方向，就是去参加多样的 eudaimonic 活动来均衡地满足自己的需求。（题外话，在查阅 Maslow 理论时我想了解学术界现在对这个理论的认可度，发现目前心理学界似乎认为[没有完全过时](https://www.verywellmind.com/updating-maslows-hierarchy-of-needs-2795269)，只是 hierarchy 的连续性和 individualistic 和 collectivistic 社会下的差异需要进行探究）
 
