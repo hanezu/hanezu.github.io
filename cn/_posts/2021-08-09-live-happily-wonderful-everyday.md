@@ -11,7 +11,7 @@ tags: [Life]
 
 ## 《素晴日》——夜晚的向日葵陪伴的，那仿佛无法翻越的坡道的前方
 
-要讨论《素晴日》的世界观，我想有三个线索可以作为很好的切入点。
+要讨论《素晴日》的世界观，有三个线索可以作为很好的切入点: 戏剧《Cyrano de Bergerac》，小时候的羽咲眼中仿佛无法翻越的坡道，与夜晚的向日葵。
 
 
 ### Cyrano de Bergerac
@@ -621,11 +621,11 @@ SCA自说，那些活在平淡无尽的日常中的人们，他们虽然幸福�
 
 > What **it** appeals to is something that is at once more common and, in our increasingly scientistic society, less well understood, namely the kind of understanding we have of, and can be given to us by, a piece of music, a poem or a work of art.
 
-这句话的 it 指代的是 “the kind of understanding that is produced by a theory or an explanation” 与 “the kind of understanding after which philosophers ought to seek” 的对比。Wittgenstein 认为前者是科学研究带来的成果，而后者只有艺术才能带来这样的理解。在他看来，逐渐走向科学为尊的时代令人痛心疾首。
+这句话的 it 指代的是 “the kind of understanding that is produced by a theory or an explanation” 与 “the kind of understanding after which philosophers ought to seek” 的对比。Wittgenstein 认为前者是科学研究带来的成果，而后者只有艺术才能带来这样的理解。在他看来，这个逐渐走向科学为尊的时代令人痛心疾首。
 
-> I was walking about in Cambridg and passed a bookshop and in the window were portraits of Russell, Freud and Einstein. A little further on, in a music shop, I saw portraits of Beethoven, Schubert and Chopin. Comparing these portraits I felt intensely the terrible degeneration that had come over the human spirit in the course of only a hundred years.
+> I was walking about in Cambridge and passed a bookshop and in the window were portraits of Russell, Freud and Einstein. A little further on, in a music shop, I saw portraits of Beethoven, Schubert and Chopin. Comparing these portraits I felt intensely the terrible degeneration that had come over the human spirit in the course of only a hundred years.
 
-从这点来说，ざくろ从《Cyrano de Bergerac》的台词中汲取的内心之力，让她有勇气去直面霸凌行为。这让她有机会与希実香，由岐和皆守发展了深刻的关系，并联合力量终结了校园霸凌。
+从这点来说，ざくろ从《Cyrano de Bergerac》的台词中汲取内心之力，让她有勇气去直面霸凌行为，让她有机会与希実香、由岐和皆守发展了深刻的关系，并联合力量终结了校园霸凌。
 
 <!--
 
@@ -653,7 +653,7 @@ Monk, Ray. How To Read Wittgenstein . Granta Publications. Kindle Edition.
 【希実香】
 「さあね……他の人は知らないけど、私はそうだ。自分が置かれてる状況って、何か良く分からないんだよね。怒るべきなのか、そうでないのか……全然」
 
-　　ーー《素晴日》第3章“ Looking-glass Insects”
+　　ーー《素晴日》第3章 “Looking-glass Insects”
 ```
 
 对于默认生活在 autopilot 状态的人类来说，感受不到自己的情绪有时候是很自然的。从进化心理学的角度来说，情绪更主要的目的是通过表情等传递给周围的人们，从而脱离危机，实现部族的延续。而对于个人来说，在极端痛苦的状况下可能会通过异化自身来逃避痛苦。我想这也是为什么一开始单独被欺凌的希実香既无法感受到愤怒，也仿佛不知道自己处于怎样一种处境，却在见到ざくろ被欺凌后燃起了反抗之心。（当然我相信一定还有爱）
@@ -687,7 +687,7 @@ Monk, Ray. How To Read Wittgenstein . Granta Publications. Kindle Edition.
 【希実香】
 「そ、それは困るよ。私は」
 
-　　ーー《素晴日》第3章“ Looking-glass Insects”
+　　ーー《素晴日》第3章 “Looking-glass Insects”
 ```
 
 David Brooks 在 [Three Views of Marriage](https://www.nytimes.com/2016/02/23/opinion/three-views-of-marriage.html) 中提到了 3 种用于决定是否进入一段婚姻的视角: psychological, romantic and [moral lens](https://mp.weixin.qq.com/s/HkwwXP86NgPA2ByZ_GJhEw#:~:text=%E7%9A%84%E7%A7%8D%E7%A7%8D%E7%A3%A8%E8%80%97%E3%80%82-,3.%20%E9%81%93%E5%BE%B7%E8%A7%86%E8%A7%92%EF%BC%88moral%20lens%EF%BC%89,-%EF%BC%9A%E6%80%A7%E6%A0%BC%E5%86%B3%E5%AE%9A%E4%BA%86)。他说，
